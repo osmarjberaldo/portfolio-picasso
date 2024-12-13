@@ -12,7 +12,7 @@ export function About() {
           <p className="mb-6">
             Sou um Desenvolvedor Full Stack apaixonado por criar soluções web inovadoras e 
             intuitivas. Com mais de 14 anos de experiência no desenvolvimento de software, 
-            especializei-me em tecnologias modernas como React, Node.js e TypeScript.
+            especializei-me em tecnologias modernas como React, Node.js, TypeScript, PHP, Python, C#, Java, C++, C, SQL, NoSQL, etc.
           </p>
           
           <p className="mb-6">

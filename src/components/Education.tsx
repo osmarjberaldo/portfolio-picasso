@@ -1,27 +1,33 @@
 export const Education = () => {
   const education = [
     {
-      period: "2017 - 2020",
-      degree: "Bachelor's Degree",
-      field: "Bachelor of Computer Applications",
-      university: "Veer Narmad South Gujarat University",
-      location: "Surat, Gujarat, India",
-      type: "Graduation",
+      period: "2022 - 2024",
+      degree: "Analista em Desenvolvimento de Sistemas",
+      field: "Analista em Desenvolvimento de Sistemas",
+      university: "Unicesumar",
+      location: "Maringa",
+      type: "Graduação",
     },
     {
-      period: "2020 - 2022",
-      degree: "Master's Degree",
-      field: "Master of Computer Applications",
-      university: "Parul University",
-      location: "Vadodara, Gujarat, India",
-      type: "Post Graduation",
+      period: "2024 - Andamento",
+      degree: "Gestão de Riscos e Cibersegurança",
+      field: "Gestão de Riscos e Cibersegurança",
+      university: "Cenes",
+      type: "Pós-Graduação",
+    },
+    {
+      period: "2024 - Andamento",
+      degree: "Coordenação Pedagógica e Supervisão Escolar",
+      field: "Coordenação Pedagógica e Supervisão Escolar",
+      university: "Cenes",
+      type: "Pós-Graduação",
     },
   ];
 
   return (
     <section className="py-20 px-4 bg-black/20">
       <h2 className="text-3xl font-bold text-center mb-12">
-        <span className="text-primary">Education</span>
+        <span className="text-primary">Formações</span>
       </h2>
 
       <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">

@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+
 export function Hero() {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center relative">
