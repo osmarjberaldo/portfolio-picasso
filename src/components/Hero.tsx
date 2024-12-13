@@ -1,28 +1,75 @@
-import { Button } from "./ui/button";
+import React from 'react';
 
-export const Hero = () => {
+export function Hero() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center text-center px-4">
-      <div className="relative">
-        <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-primary/50 to-primary/30 blur opacity-75" />
-        <h1 className="relative text-4xl md:text-6xl font-bold mb-4">
-          Hello! I'm <span className="text-primary">Nikunj Thesiya</span>
-        </h1>
+    <section className="min-h-screen flex flex-col items-center justify-center relative">
+      {/* Fundo com efeito de onda */}
+      <div className="absolute w-full h-full">
+        <div className="wave-effect"></div>
       </div>
-      <p className="text-xl md:text-2xl mb-8 text-gray-300">
-        A Front End Developer | Web Designer
-      </p>
-      <p className="mb-8 text-gray-400">
-        with <span className="text-primary">3.5+ Years</span> Experience
-      </p>
-      <div className="flex gap-4">
-        <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-          Resume
-        </Button>
-        <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-          Hire Me
-        </Button>
+
+      <div className="container mx-auto text-center z-10">
+        {/* Saudação */}
+        <div className="mb-4">
+          <span className="text-2xl">👋 Olá! Eu sou</span>
+          <h1 className="text-4xl md:text-6xl font-bold">
+            <span className="text-white">OSMAR</span>{' '}
+            <span className="text-yellow-400">BERALDO</span>
+          </h1>
+        </div>
+
+        {/* Título e Experiência */}
+        <div className="mb-8">
+          <h2 className="text-xl md:text-2xl mb-2">
+            Desenvolvedor Full Stack | Analista de Sistemas | PenTester
+          </h2>
+          <p className="text-lg">
+            com <span className="bg-yellow-400 px-2 rounded">14+ Anos</span> de Experiência
+          </p>
+        </div>
+
+        {/* Botões */}
+        <div className="flex gap-4 justify-center mb-12">
+          <button className="bg-transparent border-2 border-yellow-400 text-white px-6 py-2 rounded-full hover:bg-yellow-400 hover:text-black transition">
+            Currículo
+          </button>
+          <button className="bg-yellow-400 text-black px-6 py-2 rounded-full hover:bg-yellow-500 transition">
+            Contrate-me
+          </button>
+        </div>
+
+        {/* Área da foto com tecnologias */}
+        <div className="relative w-[300px] h-[300px] mx-auto">
+          {/* Foto central */}
+          <div className="absolute inset-0 bg-yellow-400 rounded-full overflow-hidden">
+            <img
+              src="/sua-foto.jpg"
+              alt="Foto de perfil"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Tecnologias flutuantes */}
+          <div className="tech-bubble top-0 left-0">
+            <img src="/nextjs-icon.svg" alt="NextJS" className="w-10 h-10" />
+          </div>
+          <div className="tech-bubble top-0 right-0">
+            <img src="/tailwind-icon.svg" alt="Tailwind CSS" className="w-10 h-10" />
+          </div>
+          <div className="tech-bubble bottom-0 left-0">
+            <img src="/react-icon.svg" alt="ReactJS" className="w-10 h-10" />
+          </div>
+          <div className="tech-bubble bottom-0 right-0">
+            <img src="/javascript-icon.svg" alt="JavaScript" className="w-10 h-10" />
+          </div>
+          <div className="tech-bubble left-1/2 -translate-x-1/2 top-0">
+            <img src="/graphql-icon.svg" alt="GraphQL" className="w-10 h-10" />
+          </div>
+          <div className="tech-bubble left-1/2 -translate-x-1/2 bottom-0">
+            <img src="/figma-icon.svg" alt="Figma" className="w-10 h-10" />
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
-};
+}
