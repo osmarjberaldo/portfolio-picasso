@@ -1,5 +1,4 @@
 import * as React from "react"
-
 import { cn } from "@/lib/utils"
 
 const Card = React.forwardRef<
@@ -9,11 +8,25 @@ const Card = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "rounded-lg border bg-card text-card-foreground shadow-sm",
+      "rounded-lg border bg-card text-card-foreground shadow-sm relative overflow-hidden",
       className
     )}
     {...props}
-  />
+  >
+    <div className="absolute inset-0 w-full h-full">
+      <div 
+        className="w-[500px] h-[500px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        style={{
+          background: 'linear-gradient(45deg, rgba(252, 211, 77, 0.1) 0%, transparent 100%)',
+          animation: 'spin 20s linear infinite',
+          borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%'
+        }}
+      />
+    </div>
+    <div className="relative z-10">
+      {props.children}
+    </div>
+  </div>
 ))
 Card.displayName = "Card"
 

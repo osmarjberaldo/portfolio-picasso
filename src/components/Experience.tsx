@@ -3,16 +3,17 @@ import { Card } from "./ui/card";
 export const Experience = () => {
   const experiences = [
     {
-      company: "Troonbound Pvt. Ltd.",
-      location: "Surat, Gujarat, India",
-      position: "Front End Developer",
-      period: "JUNE 2023 - PRESENT",
+      company: "Pipeline Piscinas",
+      location: "Jacarezinho, Ourinhos, Assis, Londrina, Santo Antônio",
+      position: "Gerente TI",
+      period: "Setembro 2010 - Atual",
       responsibilities: [
-        "Developed and maintained front-end of 5-6 Laravel Inertia.js, developing publishing in front-end design and development.",
-        "Led the development of the Virtual Academy project, a full-stack Next.js application.",
-        "Managed both front-end and back-end web projects utilizing Node.js API Routes for seamless integration.",
-        "Integrated Stripe Payment Gateway for seamless and secure transactions.",
-        "Successfully optimized the application on Visual for optimal performance and accessibility.",
+        "Gerência de projetos, como desenvolvimento de sistemas e software, rede e sistemas IoT",
+        "Instalação e manutenção de sistemas de controle e automação, Computadores, Impressoras, Roteadores, Switches, Servidores, telefonia, etc.",
+        "Desenvolvimento de Soluções para clientes e Franquias",
+        "Soluções e otimização de processos",
+        "Segurança Cibernética",
+        "Suporte Técnico",
       ],
     },
   ];
@@ -20,7 +21,7 @@ export const Experience = () => {
   return (
     <section className="py-20 px-4">
       <h2 className="text-3xl font-bold text-center mb-12">
-        <span className="text-primary">Experience</span>
+        <span className="text-primary">Última Experiência</span>
       </h2>
 
       <div className="max-w-4xl mx-auto">

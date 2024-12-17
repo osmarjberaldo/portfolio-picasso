@@ -8,18 +8,23 @@ export function About() {
           Sobre Mim
         </h2>
         
-        <div className="max-w-3xl mx-auto text-gray-300">
-          <p className="mb-6">
-            Sou um Desenvolvedor Full Stack apaixonado por criar soluções web inovadoras e 
-            intuitivas. Com mais de 14 anos de experiência no desenvolvimento de software, 
-            especializei-me em tecnologias modernas como React, Node.js, TypeScript, PHP, Python, C#, Java, C++, C, SQL, NoSQL, etc.
-          </p>
-          
-          <p className="mb-6">
-            Minha jornada inclui trabalhos com empresas de diversos portes, onde desenvolvi 
-            habilidades sólidas em arquitetura de software, práticas ágeis e liderança técnica.
-          </p>
-        </div>
+        <Card className="max-w-3xl mx-auto bg-zinc-900/50 text-gray-300">
+          <div className="p-8">
+            <p className="mb-6">
+              Sou um Desenvolvedor Full Stack apaixonado por criar soluções web inovadoras e 
+              intuitivas. Com mais de 14 anos de experiência no desenvolvimento de software, 
+              especializei-me em tecnologias modernas como React, Node.js, TypeScript, PHP, Python, 
+              C#, Java, C++, C, SQL, NoSQL, entre outras.
+            </p>
+            
+            <p className="mb-6">
+              Minha jornada profissional inclui trabalhos com empresas de diversos portes, 
+              onde desenvolvi habilidades sólidas em arquitetura de software, metodologias 
+              ágeis e liderança técnica. Busco constantemente aprender novas tecnologias e 
+              aprimorar minhas habilidades para entregar as melhores soluções.
+            </p>
+          </div>
+        </Card>
       </div>
     </section>
   );

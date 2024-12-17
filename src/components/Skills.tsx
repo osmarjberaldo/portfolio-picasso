@@ -3,13 +3,31 @@ import React from 'react';
 export function Skills() {
   const designTools = [
     { name: 'Adobe XD', icon: 'https://cdn.simpleicons.org/adobexd/FF61F6' },
+    { name: 'Adobe Photoshop', icon: 'https://cdn.simpleicons.org/adobephotoshop/31A8FF' },
+    { name: 'Adobe Premiere', icon: 'https://cdn.simpleicons.org/adobepremierepro/9999FF' },
     { name: 'Figma', icon: 'https://cdn.simpleicons.org/figma/F24E1E' },
+    { name: 'Canva', icon: 'https://cdn.simpleicons.org/canva/00C4CC' },
+    { name: 'Midjourney', icon: 'https://upload.wikimedia.org/wikipedia/commons/2/24/Midjourney_Emblem.svg' },
+    { name: 'DALL-E', icon: 'https://cdn.simpleicons.org/openai/412991' },
   ];
 
   const technologies = [
     { name: 'HTML5', icon: 'https://cdn.simpleicons.org/html5/E34F26' },
     { name: 'CSS3', icon: 'https://cdn.simpleicons.org/css3/1572B6' },
     { name: 'JavaScript', icon: 'https://cdn.simpleicons.org/javascript/F7DF1E' },
+    { name: 'PHP', icon: 'https://cdn.simpleicons.org/php/777BB4' },
+    { name: 'MySQL', icon: 'https://cdn.simpleicons.org/mysql/4479A1' },
+    { name: 'C#', icon: 'https://static-00.iconduck.com/assets.00/c-sharp-c-icon-1822x2048-wuf3ijab.png' },
+    { name: 'C++', icon: 'https://cdn.simpleicons.org/cplusplus/00599C' },
+    { name: 'Arduino', icon: 'https://cdn.simpleicons.org/arduino/00979D' },
+    { name: 'Laravel', icon: 'https://cdn.simpleicons.org/laravel/FF2D20' },
+    { name: 'SQL', icon: 'https://cdn.simpleicons.org/postgresql/4169E1' },
+    { name: 'Visual Basic', icon: 'https://cdn.simpleicons.org/dotnet/512BD4' },
+    { name: 'Java', icon: 'https://cdn-icons-png.flaticon.com/512/226/226777.png' },
+    { name: 'Python', icon: 'https://cdn.simpleicons.org/python/3776AB' },
+    { name: 'Node.js', icon: 'https://cdn.simpleicons.org/nodedotjs/339933' },
+    { name: 'TypeScript', icon: 'https://cdn.simpleicons.org/typescript/3178C6' },
+    { name: 'Docker', icon: 'https://cdn.simpleicons.org/docker/2496ED' },
     { name: 'jQuery', icon: 'https://cdn.simpleicons.org/jquery/0769AD' },
     { name: 'SCSS', icon: 'https://cdn.simpleicons.org/sass/CC6699' },
     { name: 'Bootstrap', icon: 'https://cdn.simpleicons.org/bootstrap/7952B3' },
@@ -33,24 +51,34 @@ export function Skills() {
   ];
 
   const devTools = [
-    { name: 'Visual Studio Code', icon: 'https://cdn.simpleicons.org/visualstudiocode/007ACC' },
+    { name: 'VS Code', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1024px-Visual_Studio_Code_1.35_icon.svg.png' },
+    { name: 'Visual Studio', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Visual_Studio_Icon_2022.svg/1200px-Visual_Studio_Icon_2022.svg.png' },
+    { name: 'Windows', icon: 'https://img.icons8.com/?size=512&id=108792&format=png' },
+    { name: 'Linux', icon: 'https://cdn.simpleicons.org/linux/FCC624' },
+    { name: 'macOS', icon: 'https://cdn.simpleicons.org/apple/000000' },
     { name: 'Gitlab', icon: 'https://cdn.simpleicons.org/gitlab/FC6D26' },
     { name: 'Github', icon: 'https://cdn.simpleicons.org/github/181717' },
     { name: 'Notion', icon: 'https://cdn.simpleicons.org/notion/000000' },
     { name: 'Postman', icon: 'https://cdn.simpleicons.org/postman/FF6C37' },
+    { name: 'Docker Desktop', icon: 'https://cdn.simpleicons.org/docker/2496ED' },
+    { name: 'Azure DevOps', icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ17HXm5WjbqugVq4F8DDs2xoidNIkI5THSKw&s' },
+    { name: 'AWS', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1024px-Amazon_Web_Services_Logo.svg.png' },
+    { name: 'Jira', icon: 'https://cdn.simpleicons.org/jira/0052CC' },
+    { name: 'Trello', icon: 'https://cdn.simpleicons.org/trello/0052CC' },
+    { name: 'Slack', icon: 'https://cdn.simpleicons.org/slack/4A154B' },
   ];
 
   return (
     <section className="py-16 bg-black text-white">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-yellow-400 mb-16">
-          Skills
+          Habilidades
         </h2>
 
         {/* Design Tools */}
         <div className="mb-16">
           <h3 className="text-2xl font-semibold text-yellow-400 mb-8 text-center">
-            Design Tools I Use
+            Ferramentas de Design que Utilizo
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             {designTools.map((tool) => (
@@ -68,7 +96,7 @@ export function Skills() {
         {/* Technologies */}
         <div className="mb-16">
           <h3 className="text-2xl font-semibold text-yellow-400 mb-8 text-center">
-            Technologies I Use
+            Tecnologias que Utilizo
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             {technologies.map((tech) => (
@@ -86,7 +114,7 @@ export function Skills() {
         {/* Development Tools */}
         <div>
           <h3 className="text-2xl font-semibold text-yellow-400 mb-8 text-center">
-            Development & Productivity Tools I Use
+            Ferramentas de Desenvolvimento e Produtividade
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             {devTools.map((tool) => (
