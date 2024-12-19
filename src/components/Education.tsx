@@ -27,7 +27,7 @@ export const Education = () => {
   return (
     <section className="py-20 px-4 bg-black/20">
       <h2 className="text-3xl font-bold text-center mb-12">
-        <span className="text-primary">Formações</span>
+        <span className="text-yellow-400">Formação Acadêmica</span>
       </h2>
 
       <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
@@ -40,7 +40,7 @@ export const Education = () => {
               </span>
             </div>
             
-            <h3 className="text-xl font-semibold">{edu.field}</h3>
+            <h3 className="text-xl font-semibold text-yellow-400">{edu.field}</h3>
             <p className="text-gray-400">{edu.university}</p>
             <p className="text-sm text-gray-500">{edu.location}</p>
           </div>

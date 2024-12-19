@@ -7,7 +7,6 @@ interface Technology {
 
 interface Project {
   title: string;
-  logo?: string;
   screenshot: string;
   tipo: string;
   technologies: Technology[];
@@ -18,39 +17,72 @@ interface Project {
 export function Projects() {
   const projects: Project[] = [
     {
-      title: "CricTracker",
-      logo: "/images/crictracker-logo.png",
-      screenshot: "/images/crictracker-screenshot.png",
-      tipo: "Website & Painel Admin",
+      title: "Aplicativo de Calculo de Estacas",
+      screenshot: "https://i.ibb.co/f1dPyF4/Captura-de-tela-2024-12-19-081323.png",
+      tipo: "Aplicativo Web e Mobile",
       technologies: [
         { name: "JavaScript", icon: "https://cdn.simpleicons.org/javascript/F7DF1E" },
-        { name: "Bootstrap", icon: "https://cdn.simpleicons.org/bootstrap/7952B3" },
-        { name: "SCSS", icon: "https://cdn.simpleicons.org/sass/CC6699" },
-        { name: "ReactJS", icon: "https://cdn.simpleicons.org/react/61DAFB" },
-        { name: "NextJS", icon: "https://cdn.simpleicons.org/nextdotjs/000000" },
-        { name: "AMP", icon: "https://cdn.simpleicons.org/amp/005AF0" },
-        { name: "React Hook Form", icon: "https://cdn.simpleicons.org/react/61DAFB" },
-        { name: "GraphQL", icon: "https://cdn.simpleicons.org/graphql/E10098" },
-        { name: "Apollo GraphQL", icon: "https://cdn.simpleicons.org/apollographql/311C87" },
-        { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032" }
+        { name: "React", icon: "https://cdn.simpleicons.org/react/61DAFB" },
+        { name: "Vite", icon: "https://cdn.simpleicons.org/vite/646CFF" },
+        { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
+        { name: "REST", icon: "https://media.licdn.com/dms/image/v2/D4D12AQHMZSBsgCI9YQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1657641228013?e=2147483647&v=beta&t=PGvET7cRlEDvIgL7-7Y9n0UvrpHFyT_WeqNrFUYaz-I" },
+        { name: "MySQL", icon: "https://cdn.simpleicons.org/mysql/4479A1" },
+        { name: "CSS3", icon: "https://cdn.simpleicons.org/css3/1572B6" },
+        { name: "HTML5", icon: "https://cdn.simpleicons.org/html5/E34F26" },
       ],
-      link: "#",
+      link: "https://calculoescavao.netlify.app/",
       bgColor: "bg-blue-950"
     },
     {
-      title: "SportsBuzz",
-      logo: "/images/sportsbuzz-logo.png",
-      screenshot: "/images/sportsbuzz-screenshot.png",
-      tipo: "Website & Painel Admin",
+      title: "PipeConnect",
+      screenshot: "https://i.ibb.co/2M40BBB/Captura-de-tela-2024-12-19-082836.png",
+      tipo: "Aplicativo Mobile - Android e iOS",
       technologies: [
         { name: "React", icon: "https://cdn.simpleicons.org/react/61DAFB" },
-        { name: "Redux", icon: "https://cdn.simpleicons.org/redux/764ABC" },
+        { name: "MQTT", icon: "https://cdn.simpleicons.org/mqtt/FF0000" },
         { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs/339933" },
-        { name: "MongoDB", icon: "https://cdn.simpleicons.org/mongodb/47A248" },
-        { name: "GraphQL", icon: "https://cdn.simpleicons.org/graphql/E10098" }
+        { name: "MySQL", icon: "https://cdn.simpleicons.org/mysql/4479A1" },
+        { name: "REST API", icon: "https://media.licdn.com/dms/image/v2/D4D12AQHMZSBsgCI9YQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1657641228013?e=2147483647&v=beta&t=PGvET7cRlEDvIgL7-7Y9n0UvrpHFyT_WeqNrFUYaz-I" },
+        { name: "AWS", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1024px-Amazon_Web_Services_Logo.svg.png" },
+        { name: "Expo", icon: "https://cdn.simpleicons.org/expo/000020" }
       ],
-      link: "#",
-      bgColor: "bg-purple-950"
+      link: "https://apps.apple.com/us/app/pipeconnect/id6737283726?platform=iphone",
+      bgColor: "bg-purple-900"
+    },
+    {
+      title: "Busca Cetidões",
+      screenshot: "https://i.ibb.co/hW05CH2/Captura-de-tela-2024-12-19-083434.png",
+      tipo: "Website e Painel Admin",
+      technologies: [
+        { name: "React", icon: "https://cdn.simpleicons.org/react/61DAFB" },
+        { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript/3178C6" },
+        { name: "Vite", icon: "https://cdn.simpleicons.org/vite/646CFF" },
+        { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs/339933" },
+        { name: "MySQL", icon: "https://cdn.simpleicons.org/mysql/4479A1" },
+        { name: "TailwindCSS", icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4" },
+        { name: "Docker", icon: "https://cdn.simpleicons.org/docker/2496ED" },
+        { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
+      ],
+      link: "https://buscacertidoes.com.br/",
+      bgColor: "bg-blue-950"
+    },
+    {
+      title: "AdJac",
+      screenshot: "https://i.ibb.co/r0P4Df9/Captura-de-tela-2024-12-19-083924.png",
+      tipo: "Aplicativo Mobile - Android",
+      technologies: [
+        { name: "React", icon: "https://cdn.simpleicons.org/react/61DAFB" },
+        { name: "JavaScript", icon: "https://cdn.simpleicons.org/javascript/F7DF1E" },
+        { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs/339933" },
+        { name: "MySQL", icon: "https://cdn.simpleicons.org/mysql/4479A1" },
+        { name: "REST API", icon: "https://media.licdn.com/dms/image/v2/D4D12AQHMZSBsgCI9YQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1657641228013?e=2147483647&v=beta&t=PGvET7cRlEDvIgL7-7Y9n0UvrpHFyT_WeqNrFUYaz-I" },
+        { name: "Docker", icon: "https://cdn.simpleicons.org/docker/2496ED" },
+        { name: "Github", icon: "https://img.icons8.com/m_rounded/512/228BE6/github.png" },
+        { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
+        { name: "Expo", icon: "https://cdn.simpleicons.org/expo/000020" }
+      ],
+      link: "https://play.google.com/store/apps/details?id=com.zimiro.AdJc",
+      bgColor: "bg-purple-900"
     }
   ];
 
@@ -58,39 +90,41 @@ export function Projects() {
     <section className="py-16 bg-black">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-yellow-400 mb-16">
-          Projetos em que Trabalhei
+          Últimos Projetos
         </h2>
 
         <div className="flex flex-col gap-8">
           {projects.map((project) => (
-            <div
-              key={project.title}
-              className={`rounded-2xl overflow-hidden ${project.bgColor}`}
-            >
-              <div className="p-8">
-                <div className="flex items-center justify-between mb-6">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-300">{project.tipo}</p>
+            <div key={project.title} className={`flex flex-col md:flex-row gap-8 ${project.bgColor} rounded-3xl overflow-hidden p-8`}>
+              <div className="md:w-[45%]">
+                <div className="bg-gradient-to-br from-blue-400/20 to-purple-400/20 p-2 rounded-2xl">
+                  <img 
+                    src={project.screenshot} 
+                    alt={`Screenshot do ${project.title}`} 
+                    className="rounded-xl shadow-lg w-full h-[280px] object-cover border border-white/10"
+                  />
+                </div>
+              </div>
+
+              <div className="md:w-[55%] space-y-6">
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    {project.title}
+                  </h3>
+                  <div className="flex gap-2 mb-4">
+                    <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">
+                      {project.tipo}
+                    </span>
                   </div>
-                  <button
-                    onClick={() => window.open(project.link, '_blank')}
-                    className="flex items-center gap-2 text-white bg-white/10 px-4 py-2 rounded-full hover:bg-white/20 transition-colors"
-                  >
-                    Acessar {project.title}
-                    <span className="text-lg">→</span>
-                  </button>
                 </div>
 
-                <div className="mb-8">
+                <div>
                   <h4 className="text-gray-400 mb-3">Tecnologias utilizadas</h4>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
                       <div
                         key={tech.name}
-                        className="flex items-center gap-2 bg-black/30 text-sm text-white px-3 py-1.5 rounded-full"
+                        className="flex items-center gap-2 bg-white text-sm text-blue-950 px-3 py-1.5 rounded-full font-medium"
                       >
                         <img 
                           src={tech.icon} 
@@ -103,13 +137,13 @@ export function Projects() {
                   </div>
                 </div>
 
-                <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img
-                    src={project.screenshot}
-                    alt={`Screenshot do ${project.title}`}
-                    className="w-full h-auto"
-                  />
-                </div>
+                <button
+                  onClick={() => window.open(project.link, '_blank')}
+                  className="flex items-center gap-2 text-white bg-white/10 px-6 py-3 rounded-full hover:bg-white/20 transition-colors"
+                >
+                  Acessar {project.title}
+                  <span className="text-lg">→</span>
+                </button>
               </div>
             </div>
           ))}

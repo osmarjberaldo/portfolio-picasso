@@ -22,6 +22,7 @@ export function Contact() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
         body: JSON.stringify({
           nome: formData.nome,
@@ -33,18 +34,24 @@ export function Contact() {
         })
       });
 
+      const data = await response.json();
+
       if (!response.ok) {
-        throw new Error('Erro ao enviar mensagem');
+        throw new Error(data.message || 'Erro ao enviar mensagem');
       }
 
-      setStatus('success');
-      setFormData({
-        nome: '',
-        email: '',
-        telefone: '',
-        assunto: '',
-        mensagem: ''
-      });
+      if (data.status === 'success') {
+        setStatus('success');
+        setFormData({
+          nome: '',
+          email: '',
+          telefone: '',
+          assunto: '',
+          mensagem: ''
+        });
+      } else {
+        throw new Error(data.message || 'Erro ao enviar mensagem');
+      }
     } catch (error) {
       console.error('Erro:', error);
       setStatus('error');
@@ -172,7 +179,7 @@ export function Contact() {
           {/* Informações de Contato */}
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold text-yellow-400">
-              Outras formas de contato
+              Outras Formas de Contato
             </h3>
             <p className="text-gray-300">
               Escolha a forma que preferir para entrar em contato comigo.

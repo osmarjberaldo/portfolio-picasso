@@ -1,147 +1,55 @@
 import React from 'react';
 
-interface Certificate {
-  platform: {
-    name: string;
-    icon: string;
-    color: string;
-  };
-  title: string;
-  link: string;
-}
-
 export function Certificates() {
-  const certificates: Certificate[] = [
-    {
-      platform: {
-        name: "Udemy",
-        icon: "https://cdn.simpleicons.org/udemy/A435F0",
-        color: "text-[#A435F0]"
-      },
-      title: "CSS e Sass Avançado: Flexbox, Grid, Animações e Mais!",
-      link: "#"
-    },
-    {
-      platform: {
-        name: "Udemy",
-        icon: "https://cdn.simpleicons.org/udemy/A435F0",
-        color: "text-[#A435F0]"
-      },
-      title: "Curso Completo de JavaScript 2020: Do Zero ao Especialista!",
-      link: "#"
-    },
-    {
-      platform: {
-        name: "Coursera",
-        icon: "https://cdn.simpleicons.org/coursera/0056D2",
-        color: "text-[#0056D2]"
-      },
-      title: "Design UX Google",
-      link: "#"
-    },
-    {
-      platform: {
-        name: "FreeCodeCamp",
-        icon: "https://cdn.simpleicons.org/freecodecamp/0A0A23",
-        color: "text-[#0A0A23]"
-      },
-      title: "Bibliotecas Front End",
-      link: "#"
-    },
-    {
-      platform: {
-        name: "LinkedIn",
-        icon: "https://cdn.simpleicons.org/linkedin/0A66C2",
-        color: "text-[#0A66C2]"
-      },
-      title: "Treinamento Essencial React.js",
-      link: "#"
-    },
-    {
-      platform: {
-        name: "Educative",
-        icon: "https://cdn.simpleicons.org/education/2B70F8",
-        color: "text-[#2B70F8]"
-      },
-      title: "Entendendo Redux: Um Guia para Iniciantes em Gerenciamento de Estado",
-      link: "#"
-    }
-  ];
-
   return (
     <section className="py-16 bg-black">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-yellow-400 mb-16">
           Certificados
         </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {certificates.map((cert) => (
-            <div
-              key={cert.title}
-              className="bg-white/80 backdrop-blur-md 
-                       rounded-2xl p-6 relative group 
-                       hover:bg-white/90 transition-all duration-300
-                       border border-white/20"
-            >
-              {/* Plataforma e Ícone */}
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 rounded-full overflow-hidden bg-white/90 shadow-sm">
-                  <img
-                    src={cert.platform.icon}
-                    alt={cert.platform.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <span className={`font-medium ${cert.platform.color}`}>
-                  {cert.platform.name}
-                </span>
-                
-                {/* Ícone de Certificado */}
-                <div className="absolute top-6 right-6">
-                  <img
-                    src="https://cdn.simpleicons.org/certificate/94A3B8"
-                    alt="Certificado"
-                    className="w-6 h-6 opacity-40 group-hover:opacity-60 transition-opacity"
-                  />
-                </div>
-              </div>
-
-              {/* Título do Certificado */}
-              <h3 className="text-gray-800 text-lg font-semibold mb-4 pr-8 group-hover:text-gray-900 transition-colors">
-                {cert.title}
-              </h3>
-
-              {/* Botão Ver */}
-              <button
-                onClick={() => window.open(cert.link, '_blank')}
-                className="inline-flex items-center gap-2 text-sm text-gray-500 
-                         hover:text-gray-800 transition-colors group-hover:text-gray-700
-                         bg-white/60 px-3 py-1.5 rounded-full hover:bg-white/90"
-              >
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                  />
-                </svg>
-                Ver
-              </button>
+        
+        <div className="max-w-4xl mx-auto bg-blue-950 rounded-3xl p-8">
+          {/* Cabeçalho com ícone e local */}
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 bg-blue-900/50 rounded-full flex items-center justify-center">
+              <svg className="w-6 h-6 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+              </svg>
             </div>
-          ))}
+            <div>
+              <h3 className="text-lg font-semibold text-white">MEUS CERTIFICADOS</h3>
+            </div>
+          </div>
+
+          {/* Título */}
+          <h2 className="text-2xl font-bold text-white mb-4">
+            Em constante atualização
+          </h2>
+
+          {/* Lista de responsabilidades */}
+          <ul className="space-y-3 text-gray-300">            
+            <li className="flex items-start gap-2">
+              <span className="text-yellow-400 mt-1">→</span>
+              <span>Acesse o link abaixo para o Google Drive com meus certificados. 95% são cursos voltados para programação, desenvolvimento web e mobile.</span>
+            </li>
+          </ul>
+
+          {/* Link para certificados */}
+          <div className="mt-8 flex justify-center">
+            <a
+              href="https://drive.google.com/drive/folders/1g2xwjoSDSmpSS0XoKc8nMi3xKxMaz6uq?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-6 py-3 bg-blue-900/30 border border-white/20 rounded-full hover:bg-blue-800/40 hover:border-white/40 transition-all cursor-pointer"
+            >
+              <img 
+                src="https://cdn.simpleicons.org/googledrive/4285F4" 
+                alt="Google Drive" 
+                className="w-8 h-8"
+              />
+              <span className="text-white text-lg font-medium">Ver Certificados</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
