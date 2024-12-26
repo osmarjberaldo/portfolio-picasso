@@ -121,6 +121,18 @@ export function Projects() {
       ],
       link: "https://pipelienpiscinas.com.br",
       bgColor: "bg-purple-900"
+    },
+    {
+      title: "Pipe100",
+      screenshot: "https://pipelinepiscinas.com.br/wp-content/uploads/elementor/thumbs/ozonio-qeytkf5ltgq6jwsly76j3o1nb5gg93qyfem4hlkjgo.webp",
+      tipo: "Gerador de Ozonio para Piscinas",
+      technologies: [
+        { name: "Altium", icon: "https://cdn.simpleicons.org/altiumdesigner/A5915F" },
+        { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
+        { name: "Github", icon: "https://cdn.simpleicons.org/github/181717" },
+      ],
+      link: "https://pipelinepiscinas.com.br/",
+      bgColor: "bg-blue-950"
     }
   ];
 
