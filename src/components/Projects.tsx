@@ -83,6 +83,25 @@ export function Projects() {
       ],
       link: "https://play.google.com/store/apps/details?id=com.zimiro.AdJc",
       bgColor: "bg-purple-900"
+    },
+    {
+      title: "PipeConnect",
+      screenshot: "https://i.ibb.co/CKRCJvM/Captura-de-tela-2024-12-26-152637.png",
+      tipo: "Placa de Automação para Piscinas",
+      technologies: [
+        { name: "C++", icon: "https://cdn.simpleicons.org/cplusplus/61DAFB" },
+        { name: "Altium", icon: "https://cdn.simpleicons.org/altiumdesigner/A5915F" },
+        { name: "Json", icon: "https://cdn.simpleicons.org/json/646CFF" },
+        { name: "REST API", icon: "https://media.licdn.com/dms/image/v2/D4D12AQHMZSBsgCI9YQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1657641228013?e=2147483647&v=beta&t=PGvET7cRlEDvIgL7-7Y9n0UvrpHFyT_WeqNrFUYaz-I" },
+        { name: "MySQL", icon: "https://cdn.simpleicons.org/mysql/4479A1" },
+        { name: "HTML5", icon: "https://cdn.simpleicons.org/html5/E34F26" },
+        { name: "JavaScript", icon: "https://cdn.simpleicons.org/javascript/F7DF1E" },
+        { name: "Docker", icon: "https://cdn.simpleicons.org/docker/2496ED" },
+        { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
+        { name: "Github", icon: "https://cdn.simpleicons.org/github/181717" },
+      ],
+      link: "https://pipelinepiscinas.com.br/",
+      bgColor: "bg-blue-950"
     }
   ];
 
