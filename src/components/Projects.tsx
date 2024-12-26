@@ -44,7 +44,9 @@ export function Projects() {
         { name: "MySQL", icon: "https://cdn.simpleicons.org/mysql/4479A1" },
         { name: "REST API", icon: "https://media.licdn.com/dms/image/v2/D4D12AQHMZSBsgCI9YQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1657641228013?e=2147483647&v=beta&t=PGvET7cRlEDvIgL7-7Y9n0UvrpHFyT_WeqNrFUYaz-I" },
         { name: "AWS", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1024px-Amazon_Web_Services_Logo.svg.png" },
-        { name: "Expo", icon: "https://cdn.simpleicons.org/expo/000020" }
+        { name: "Expo", icon: "https://cdn.simpleicons.org/expo/000020" },
+        { name: "Google Play", icon: "https://cdn.simpleicons.org/googleplay/00897B" },
+        { name: "App Store", icon: "https://cdn.simpleicons.org/appstore/0D96F6" },
       ],
       link: "https://apps.apple.com/us/app/pipeconnect/id6737283726?platform=iphone",
       bgColor: "bg-purple-900"
@@ -79,7 +81,8 @@ export function Projects() {
         { name: "Docker", icon: "https://cdn.simpleicons.org/docker/2496ED" },
         { name: "Github", icon: "https://img.icons8.com/m_rounded/512/228BE6/github.png" },
         { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
-        { name: "Expo", icon: "https://cdn.simpleicons.org/expo/000020" }
+        { name: "Expo", icon: "https://cdn.simpleicons.org/expo/000020" },
+        { name: "Google Play", icon: "https://cdn.simpleicons.org/googleplay/00897B" },
       ],
       link: "https://play.google.com/store/apps/details?id=com.zimiro.AdJc",
       bgColor: "bg-purple-900"
@@ -87,11 +90,12 @@ export function Projects() {
     {
       title: "PipeConnect",
       screenshot: "https://i.ibb.co/CKRCJvM/Captura-de-tela-2024-12-26-152637.png",
-      tipo: "Placa de Automação para Piscinas",
+      tipo: "Placa de Automação para Piscinas - WIFI",
       technologies: [
         { name: "C++", icon: "https://cdn.simpleicons.org/cplusplus/61DAFB" },
         { name: "Altium", icon: "https://cdn.simpleicons.org/altiumdesigner/A5915F" },
         { name: "Json", icon: "https://cdn.simpleicons.org/json/646CFF" },
+        { name: "MQTT", icon: "https://cdn.simpleicons.org/mqtt/FF0000" },
         { name: "REST API", icon: "https://media.licdn.com/dms/image/v2/D4D12AQHMZSBsgCI9YQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1657641228013?e=2147483647&v=beta&t=PGvET7cRlEDvIgL7-7Y9n0UvrpHFyT_WeqNrFUYaz-I" },
         { name: "MySQL", icon: "https://cdn.simpleicons.org/mysql/4479A1" },
         { name: "HTML5", icon: "https://cdn.simpleicons.org/html5/E34F26" },
@@ -102,6 +106,21 @@ export function Projects() {
       ],
       link: "https://pipelinepiscinas.com.br/",
       bgColor: "bg-blue-950"
+    },
+    {
+      title: "PipeControl",
+      screenshot: "https://i.ibb.co/Pg6YT6m/Captura-de-tela-2024-12-26-153151.png",
+      tipo: "Placa de Controle para Quipamentos de Piscina",
+      technologies: [
+        { name: "C++", icon: "https://cdn.simpleicons.org/cplusplus/61DAFB" },
+        { name: "Altium", icon: "https://cdn.simpleicons.org/altiumdesigner/A5915F" },
+        { name: "REST API", icon: "https://media.licdn.com/dms/image/v2/D4D12AQHMZSBsgCI9YQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1657641228013?e=2147483647&v=beta&t=PGvET7cRlEDvIgL7-7Y9n0UvrpHFyT_WeqNrFUYaz-I" },
+         { name: "Docker", icon: "https://cdn.simpleicons.org/docker/2496ED" },
+        { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
+        { name: "Github", icon: "https://cdn.simpleicons.org/github/181717" },
+      ],
+      link: "https://pipelienpiscinas.com.br",
+      bgColor: "bg-purple-900"
     }
   ];
 
