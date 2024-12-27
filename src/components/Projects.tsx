@@ -17,13 +17,13 @@ interface Project {
 export function Projects() {
   const projects: Project[] = [
     {
-      title: "Aplicativo de Calculo de Estacas",
+      title: "Aplicativo de Calculo para Engenharia Civil",
       screenshot: "https://i.ibb.co/f1dPyF4/Captura-de-tela-2024-12-19-081323.png",
       tipo: "Aplicativo Web e Mobile",
       technologies: [
         { name: "JavaScript", icon: "https://cdn.simpleicons.org/javascript/F7DF1E" },
         { name: "React", icon: "https://cdn.simpleicons.org/react/61DAFB" },
-        { name: "Vite", icon: "https://cdn.simpleicons.org/vite/646CFF" },
+        { name: "Vite", icon: "https://img.icons8.com/fluent/512/vite.png" },
         { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
         { name: "REST", icon: "https://media.licdn.com/dms/image/v2/D4D12AQHMZSBsgCI9YQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1657641228013?e=2147483647&v=beta&t=PGvET7cRlEDvIgL7-7Y9n0UvrpHFyT_WeqNrFUYaz-I" },
         { name: "MySQL", icon: "https://cdn.simpleicons.org/mysql/4479A1" },
@@ -58,7 +58,7 @@ export function Projects() {
       technologies: [
         { name: "React", icon: "https://cdn.simpleicons.org/react/61DAFB" },
         { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript/3178C6" },
-        { name: "Vite", icon: "https://cdn.simpleicons.org/vite/646CFF" },
+        { name: "Vite", icon: "https://img.icons8.com/fluent/512/vite.png" },
         { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs/339933" },
         { name: "MySQL", icon: "https://cdn.simpleicons.org/mysql/4479A1" },
         { name: "TailwindCSS", icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4" },
@@ -133,6 +133,21 @@ export function Projects() {
       ],
       link: "https://pipelinepiscinas.com.br/",
       bgColor: "bg-blue-950"
+    },
+    {
+      title: "Franquia de Piscinas",
+      screenshot: "https://i.ibb.co/njFj0k0/Captura-de-tela-2024-12-27-145516.png",
+      tipo: "Site de para divulgação de franquia de piscinas",
+      technologies: [
+        { name: "Wordpress", icon: "https://cdn.simpleicons.org/wordpress/61DAFB" },
+        { name: "IA", icon: "https://cdn.simpleicons.org/openai/412991" },
+        { name: "REST API", icon: "https://media.licdn.com/dms/image/v2/D4D12AQHMZSBsgCI9YQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1657641228013?e=2147483647&v=beta&t=PGvET7cRlEDvIgL7-7Y9n0UvrpHFyT_WeqNrFUYaz-I" },
+         { name: "Json", icon: "https://cdn.simpleicons.org/json/000000" },
+        { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
+        { name: "Github", icon: "https://cdn.simpleicons.org/github/181717" },
+      ],
+      link: "https://franquiapipeline.com/",
+      bgColor: "bg-purple-900"
     }
   ];
 
