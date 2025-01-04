@@ -58,6 +58,10 @@ export function Skills() {
     { name: 'Flutter', icon: 'https://cdn.simpleicons.org/flutter/00BCD4' },
     { name: 'Prometheus', icon: 'https://cdn.simpleicons.org/prometheus/E10098' },
     { name: 'Grafana', icon: 'https://cdn.simpleicons.org/grafana/F46800' },
+    { name: 'IA', icon: 'https://cdn.simpleicons.org/openai/412991' },
+    { name: 'npm', icon: 'https://cdn.simpleicons.org/npm/CB3837' },
+    { name: 'Wordpress', icon: 'https://cdn.simpleicons.org/wordpress/21759B' },
+    { name: 'Cloudflare', icon: 'https://cdn.simpleicons.org/cloudflare/F38020' },
   ];
 
   const devTools = [

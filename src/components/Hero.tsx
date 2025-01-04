@@ -50,8 +50,13 @@ export function Hero() {
             Currículo
           </a>
           <a href="#contact" className="bg-yellow-400 text-black px-6 py-2 rounded-full hover:bg-yellow-500 transition">
-            Contrate-me
+            Contato
           </a>
+          <a href="https://github.com/osmarjberaldo" target="_blank" className="bg-transparent border-2 border-yellow-400 text-white px-6 py-2 rounded-full hover:bg-yellow-400 hover:text-black transition">
+            GitHub
+          </a>
+
+          
         </div>
 
         {/* Área da foto com tecnologias */}
@@ -60,7 +65,7 @@ export function Hero() {
           <div className="absolute inset-0 bg-yellow-400 rounded-full overflow-hidden">
             <img
               src="/sua-foto.jpg"
-              alt="Foto de perfil"
+              alt="Foto em breve"
               className="w-full h-full object-cover"
             />
           </div>
@@ -164,7 +169,7 @@ export function Hero() {
                style={{ width: '100px', borderRadius: '5px', top: '260px', right: '-120px' }}>
             <div className="bg-[#FF2D20] h-7 w-9 flex items-center justify-center" 
                  style={{ borderTopLeftRadius: '5px', borderBottomLeftRadius: '5px' }}>
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" 
+              <img src="https://static-00.iconduck.com/assets.00/laravel-icon-249x256-htls1yg6.png" 
                    alt="Laravel" className="w-6 h-6 object-contain" style={{ margin: '0 auto' }} />
             </div>
             <span className="px-2 text-xs font-medium text-black">Laravel</span>
