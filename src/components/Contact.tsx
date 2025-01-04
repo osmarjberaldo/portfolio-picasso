@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 export function Contact() {
   const [formData, setFormData] = useState({
-    nome: '',
-    email: '',
-    telefone: '',
-    assunto: '',
-    mensagem: ''
+    nome: "",
+    email: "",
+    telefone: "",
+    assunto: "",
+    mensagem: "",
   });
 
   const [enviando, setEnviando] = useState(false);
-  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setEnviando(true);
-    setStatus('idle');
+    setStatus("idle");
 
     try {
-      const response = await fetch('https://devosmar.com.br/send-email.php', {
-        method: 'POST',
+      const response = await fetch("https://devosmar.com.br/send-email.php", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
+          "Content-Type": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify({
           nome: formData.nome,
@@ -30,41 +30,43 @@ export function Contact() {
           telefone: formData.telefone,
           assunto: formData.assunto,
           mensagem: formData.mensagem,
-          to_email: 'contato@devosmar.com.br'
-        })
+          to_email: "contato@devosmar.com.br",
+        }),
       });
 
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.message || 'Erro ao enviar mensagem');
+        throw new Error(data.message || "Erro ao enviar mensagem");
       }
 
-      if (data.status === 'success') {
-        setStatus('success');
+      if (data.status === "success") {
+        setStatus("success");
         setFormData({
-          nome: '',
-          email: '',
-          telefone: '',
-          assunto: '',
-          mensagem: ''
+          nome: "",
+          email: "",
+          telefone: "",
+          assunto: "",
+          mensagem: "",
         });
       } else {
-        throw new Error(data.message || 'Erro ao enviar mensagem');
+        throw new Error(data.message || "Erro ao enviar mensagem");
       }
     } catch (error) {
-      console.error('Erro:', error);
-      setStatus('error');
+      console.error("Erro:", error);
+      setStatus("error");
     } finally {
       setEnviando(false);
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -80,7 +82,10 @@ export function Contact() {
           <div className="bg-zinc-900/50 p-8 rounded-lg">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="nome" className="block text-sm font-medium text-gray-300">
+                <label
+                  htmlFor="nome"
+                  className="block text-sm font-medium text-gray-300"
+                >
                   Nome
                 </label>
                 <input
@@ -95,7 +100,10 @@ export function Contact() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-300">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-300"
+                >
                   Email
                 </label>
                 <input
@@ -110,7 +118,10 @@ export function Contact() {
               </div>
 
               <div>
-                <label htmlFor="telefone" className="block text-sm font-medium text-gray-300">
+                <label
+                  htmlFor="telefone"
+                  className="block text-sm font-medium text-gray-300"
+                >
                   Telefone
                 </label>
                 <input
@@ -124,7 +135,10 @@ export function Contact() {
               </div>
 
               <div>
-                <label htmlFor="assunto" className="block text-sm font-medium text-gray-300">
+                <label
+                  htmlFor="assunto"
+                  className="block text-sm font-medium text-gray-300"
+                >
                   Assunto
                 </label>
                 <input
@@ -139,7 +153,10 @@ export function Contact() {
               </div>
 
               <div>
-                <label htmlFor="mensagem" className="block text-sm font-medium text-gray-300">
+                <label
+                  htmlFor="mensagem"
+                  className="block text-sm font-medium text-gray-300"
+                >
                   Mensagem
                 </label>
                 <textarea
@@ -157,18 +174,18 @@ export function Contact() {
                 type="submit"
                 disabled={enviando}
                 className={`w-full bg-yellow-400 text-black py-2 px-4 rounded-md font-medium hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-zinc-900 transition-colors ${
-                  enviando ? 'opacity-50 cursor-not-allowed' : ''
+                  enviando ? "opacity-50 cursor-not-allowed" : ""
                 }`}
               >
-                {enviando ? 'Enviando...' : 'Enviar Mensagem'}
+                {enviando ? "Enviando..." : "Enviar Mensagem"}
               </button>
 
-              {status === 'success' && (
+              {status === "success" && (
                 <p className="text-green-400 text-center mt-4">
                   Mensagem enviada com sucesso!
                 </p>
               )}
-              {status === 'error' && (
+              {status === "error" && (
                 <p className="text-red-400 text-center mt-4">
                   Erro ao enviar mensagem. Por favor, tente novamente.
                 </p>
@@ -220,7 +237,7 @@ export function Contact() {
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                 </svg>
                 LinkedIn
               </a>
@@ -248,6 +265,7 @@ export function Contact() {
           </div>
         </div>
       </div>
+    
     </section>
   );
 }
