@@ -40,7 +40,7 @@ export function Hero() {
             Desenvolvedor Full Stack | Analista de Sistemas | PenTester
           </h2>
           <p className="text-lg text-gray-300">
-            com <span className="bg-yellow-400 px-2 rounded text-black">14+ Anos</span> de Experiência
+            com mais de<span className="bg-yellow-400 px-2 rounded text-black">15 Anos</span> de Experiência
           </p>
         </div>
 

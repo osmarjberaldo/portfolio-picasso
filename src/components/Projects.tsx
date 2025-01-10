@@ -52,7 +52,7 @@ export function Projects() {
       bgColor: "bg-purple-900"
     },
     {
-      title: "Busca Cetidões",
+      title: "Busca Certidões",
       screenshot: "https://i.ibb.co/hW05CH2/Captura-de-tela-2024-12-19-083434.png",
       tipo: "Website e Painel Admin",
       technologies: [
