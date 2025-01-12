@@ -7,6 +7,7 @@ import { Certificates } from "@/components/Certificates";
 import { Projects } from "@/components/Projects";
 import { Resume } from "@/components/Resume";
 import { Contact } from "@/components/Contact";
+import { GoogleAdsense } from "@/components/GoogleAdsense";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <Certificates />
       <Resume />
       <Contact />
+      <GoogleAdsense />
     </div>
   );
 };

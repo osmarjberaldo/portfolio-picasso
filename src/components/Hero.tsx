@@ -1,8 +1,13 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 export function Hero() {
+  const { t } = useTranslation();
+
   return (
     <section className="min-h-screen flex flex-col items-center justify-center relative bg-black overflow-hidden">
+      <LanguageSwitcher />
       {/* Efeito de fundo */}
       <div className="absolute inset-0">
         <div 
@@ -26,37 +31,35 @@ export function Hero() {
       <div className="container mx-auto text-center relative z-10">
         {/* Saudação */}
         <div className="mb-4">
-          <span className="text-2xl text-gray-300">👋 Olá! Eu sou</span>
+          <span className="text-2xl text-gray-300">{t('greeting')}</span>
           <h1 className="text-4xl md:text-6xl font-bold">
-            <span className="text-white">OSMAR</span>{' '}
-            <span className="text-yellow-400">J.BERALDO</span>
+            <span className="text-white">{t('name')}</span>{' '}
+            <span className="text-yellow-400">{t('lastname')}</span>
           </h1>
-          <h2>PÁGINA EM ATUALIZAÇÃO</h2>
+          <h2>{t('updating')}</h2>
         </div>
 
         {/* Título e Experiência */}
         <div className="mb-8">
           <h2 className="text-xl md:text-2xl mb-2 text-gray-300">
-            Desenvolvedor Full Stack | Analista de Sistemas | PenTester
+            {t('roles')}
           </h2>
           <p className="text-lg text-gray-300">
-            com mais de<span className="bg-yellow-400 px-2 rounded text-black">15 Anos</span> de Experiência
+            {t('experience')} <span className="bg-yellow-400 px-2 rounded text-black">{t('years')}</span> {t('of_experience')}
           </p>
         </div>
 
         {/* Botões */}
         <div className="flex gap-4 justify-center mb-12">
           <a href="/curriculo.pdf" target="_blank" rel="noopener noreferrer" className="bg-transparent border-2 border-yellow-400 text-white px-6 py-2 rounded-full hover:bg-yellow-400 hover:text-black transition">
-            Currículo
+            {t('resume')}
           </a>
           <a href="#contact" className="bg-yellow-400 text-black px-6 py-2 rounded-full hover:bg-yellow-500 transition">
-            Contato
+            {t('contact')}
           </a>
           <a href="https://github.com/osmarjberaldo" target="_blank" className="bg-transparent border-2 border-yellow-400 text-white px-6 py-2 rounded-full hover:bg-yellow-400 hover:text-black transition">
             GitHub
           </a>
-
-          
         </div>
 
         {/* Área da foto com tecnologias */}
