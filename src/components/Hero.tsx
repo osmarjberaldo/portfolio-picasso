@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center relative bg-black overflow-hidden">
       <LanguageSwitcher />
-      {/* Efeito de fundo */}
+      {/* Background effect */}
       <div className="absolute inset-0">
         <div 
           className="absolute top-1/2 left-1/2 w-[800px] h-[800px]"
@@ -29,7 +29,7 @@ export function Hero() {
       </div>
 
       <div className="container mx-auto text-center relative z-10">
-        {/* Saudação */}
+        {/* Greeting */}
         <div className="mb-4">
           <span className="text-2xl text-gray-300">{t('greeting')}</span>
           <h1 className="text-4xl md:text-6xl font-bold">
@@ -39,7 +39,7 @@ export function Hero() {
           <h2>{t('updating')}</h2>
         </div>
 
-        {/* Título e Experiência */}
+        {/* Title and Experience */}
         <div className="mb-8">
           <h2 className="text-xl md:text-2xl mb-2 text-gray-300">
             {t('roles')}
@@ -49,7 +49,7 @@ export function Hero() {
           </p>
         </div>
 
-        {/* Botões */}
+        {/* Buttons */}
         <div className="flex gap-4 justify-center mb-12">
           <a href="/curriculo.pdf" target="_blank" rel="noopener noreferrer" className="bg-transparent border-2 border-yellow-400 text-white px-6 py-2 rounded-full hover:bg-yellow-400 hover:text-black transition">
             {t('resume')}
@@ -62,18 +62,18 @@ export function Hero() {
           </a>
         </div>
 
-        {/* Área da foto com tecnologias */}
+        {/* Photo area with technologies */}
         <div className="relative w-[300px] h-[300px] mx-auto">
-          {/* Foto central */}
+          {/* Central photo */}
           <div className="absolute inset-0 bg-yellow-400 rounded-full overflow-hidden">
             <img
               src="/sua-foto.jpg"
-              alt="Foto em breve"
+              alt={t('photo_alt')}
               className="w-full h-full object-cover"
             />
           </div>
 
-          {/* Tecnologias flutuantes - Primeira linha */}
+          {/* Floating technologies - First row */}
           <div className="tech-bubble absolute h-7 bg-white shadow-lg rounded flex items-center animate-float-1" 
                style={{ width: '100px', borderRadius: '5px', top: '20px', left: '-120px' }}>
             <div className="bg-black h-7 w-9 flex items-center justify-center" 
@@ -94,7 +94,7 @@ export function Hero() {
             <span className="px-2 text-xs font-medium text-black">Docker</span>
           </div>
 
-          {/* Segunda linha */}
+          {/* Second row */}
           <div className="tech-bubble absolute h-7 bg-white shadow-lg rounded flex items-center animate-float-3" 
                style={{ width: '100px', borderRadius: '5px', top: '80px', left: '-120px' }}>
             <div className="bg-[#282C34] h-7 w-9 flex items-center justify-center" 
@@ -115,7 +115,7 @@ export function Hero() {
             <span className="px-2 text-xs font-medium text-black">TypeScript</span>
           </div>
 
-          {/* Terceira linha */}
+          {/* Third row */}
           <div className="tech-bubble absolute h-7 bg-white shadow-lg rounded flex items-center animate-float-5" 
                style={{ width: '100px', borderRadius: '5px', top: '140px', left: '-120px' }}>
             <div className="bg-[#333333] h-7 w-9 flex items-center justify-center" 
@@ -136,7 +136,7 @@ export function Hero() {
             <span className="px-2 text-xs font-medium text-black">Python</span>
           </div>
 
-          {/* Quarta linha */}
+          {/* Fourth row */}
           <div className="tech-bubble absolute h-7 bg-white shadow-lg rounded flex items-center animate-float-5" 
                style={{ width: '100px', borderRadius: '5px', top: '200px', left: '-120px' }}>
             <div className="bg-[#00599C] h-7 w-9 flex items-center justify-center" 
@@ -157,7 +157,7 @@ export function Hero() {
             <span className="px-2 text-xs font-medium text-black">PHP</span>
           </div>
 
-          {/* Quinta linha */}
+          {/* Fifth row */}
           <div className="tech-bubble absolute h-7 bg-white shadow-lg rounded flex items-center animate-float-5" 
                style={{ width: '100px', borderRadius: '5px', top: '260px', left: '-120px' }}>
             <div className="bg-[#4479A1] h-7 w-9 flex items-center justify-center" 

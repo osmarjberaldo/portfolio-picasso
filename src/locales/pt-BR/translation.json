@@ -1,5 +1,5 @@
 {
-  "greeting": "👋 Olá! Eu sou",
+  "greeting": " Olá! Eu sou",
   "name": "OSMAR",
   "lastname": "J.BERALDO",
   "updating": "PÁGINA EM ATUALIZAÇÃO",
@@ -8,6 +8,146 @@
   "years": "15 Anos",
   "of_experience": "de Experiência",
   "resume": "Currículo",
-  "contact": "Contato",
-  "photo_alt": "Foto em breve"
+  "contact": {
+    "title": "Entre em Contato",
+    "name": "Nome",
+    "email": "Email",
+    "phone": "Telefone",
+    "subject": "Assunto",
+    "message": "Mensagem",
+    "sending": "Enviando...",
+    "send_message": "Enviar Mensagem",
+    "success_message": "Mensagem enviada com sucesso!",
+    "error_message": "Erro ao enviar mensagem. Por favor, tente novamente.",
+    "other_ways": "Outras Formas de Contato",
+    "choose_preferred": "Escolha a forma que preferir para entrar em contato comigo."
+  },
+  "photo_alt": "Foto de perfil",
+  "nav": {
+    "about": "Sobre",
+    "experience": "Experiência",
+    "education": "Educação",
+    "skills": "Habilidades",
+    "certificates": "Certificados",
+    "projects": "Projetos"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "description": "Sou um Desenvolvedor Full Stack apaixonado por criar soluções web inovadoras e intuitivas. Com mais de 14 anos de experiência no desenvolvimento de software, especializei-me em tecnologias modernas como React, Node.js, TypeScript, PHP, Python, C#, Java, C++, C, SQL, NoSQL, entre outras.",
+    "journey": "Minha jornada profissional inclui trabalhos com empresas de diversos portes, onde desenvolvi habilidades sólidas em arquitetura de software, metodologias ágeis e liderança técnica. Busco constantemente aprender novas tecnologias e aprimorar minhas habilidades para entregar as melhores soluções."
+  },
+  "experience": {
+    "title": "Experiência Profissional",
+    "current_role": "Cargo Atual",
+    "previous_roles": "Cargos Anteriores",
+    "latest": "Última Experiência",
+    "pipeline": {
+      "company": "Pipeline Piscinas",
+      "location": "Jacarezinho, Ourinhos, Assis, Londrina, Santo Antônio",
+      "position": "Gerente TI",
+      "period": "Setembro 2010 - Atual",
+      "responsibilities": {
+        "project_management": "Gerência de projetos, como desenvolvimento de sistemas e software, rede e sistemas IoT",
+        "maintenance": "Instalação e manutenção de sistemas de controle e automação, Computadores, Impressoras, Roteadores, Switches, Servidores, telefonia, etc.",
+        "solutions": "Desenvolvimento de Soluções para clientes e Franquias",
+        "optimization": "Soluções e otimização de processos",
+        "security": "Segurança Cibernética",
+        "support": "Suporte Técnico"
+      }
+    }
+  },
+  "education": {
+    "title": "Educação",
+    "academic_formation": "Formação Acadêmica",
+    "degree": "Formação",
+    "institution": "Instituição",
+    "period": "Período",
+    "systems_analyst": {
+      "period": "2022 - 2024",
+      "degree": "Analista em Desenvolvimento de Sistemas",
+      "field": "Analista em Desenvolvimento de Sistemas",
+      "university": "Unicesumar",
+      "location": "Maringa",
+      "type": "Graduação"
+    },
+    "cybersecurity": {
+      "period": "2024 - Andamento",
+      "degree": "Gestão de Riscos e Cibersegurança",
+      "field": "Gestão de Riscos e Cibersegurança",
+      "university": "Cenes",
+      "type": "Pós-Graduação"
+    },
+    "pedagogy": {
+      "period": "2024 - Andamento",
+      "degree": "Coordenação Pedagógica e Supervisão Escolar",
+      "field": "Coordenação Pedagógica e Supervisão Escolar",
+      "university": "Cenes",
+      "type": "Pós-Graduação"
+    }
+  },
+  "skills": {
+    "title": "Habilidades",
+    "design_tools": "Ferramentas de Design que Utilizo",
+    "technologies": "Tecnologias que Utilizo",
+    "dev_tools": "Ferramentas de Desenvolvimento e Produtividade"
+  },
+  "certificates": {
+    "title": "Certificados",
+    "my_certificates": "MEUS CERTIFICADOS",
+    "constantly_updating": "Em constante atualização",
+    "description": "Acesse o link abaixo para o Google Drive com meus certificados. 95% são cursos voltados para programação, desenvolvimento web e mobile.",
+    "view_certificates": "Ver Certificados",
+    "view": "Ver Certificado"
+  },
+  "projects": {
+    "title": "Projetos",
+    "view_project": "Ver Projeto",
+    "source_code": "Código Fonte",
+    "latest": "Últimos Projetos",
+    "technologies_used": "Tecnologias Utilizadas",
+    "access": "Acessar",
+    "screenshot_alt": "Screenshot do {{project}}",
+    "types": {
+      "web_mobile_app": "Aplicativo Web e Mobile",
+      "mobile_app": "Aplicativo Mobile - Android e iOS",
+      "website_admin": "Website e Painel Admin",
+      "android_app": "Aplicativo Mobile - Android",
+      "pool_automation": "Placa de Automação para Piscinas - WIFI",
+      "pool_control": "Placa de Controle para Equipamentos de Piscina",
+      "pool_ozone": "Gerador de Ozônio para Piscinas",
+      "franquia_piscinas": "Site para divulgação de franquia de piscinas"
+    },
+    "civil_engineering": {
+      "title": "Aplicativo de Cálculo para Engenharia Civil"
+    },
+    "pipeconnect": {
+      "title": "PipeConnect"
+    },
+    "busca_certidoes": {
+      "title": "Busca Certidões"
+    },
+    "adjac": {
+      "title": "AdJac"
+    },
+    "pipeconnect_hardware": {
+      "title": "PipeConnect"
+    },
+    "pipecontrol": {
+      "title": "PipeControl"
+    },
+    "pipe100": {
+      "title": "Pipe100"
+    },
+    "franquia_piscinas": {
+      "title": "Franquia de Piscinas"
+    }
+  },
+  "resume": {
+    "title": "Currículo",
+    "quick_hire": "Contrato Rápido",
+    "modern_cv": "Currículo / CV Moderno",
+    "web_app": "Aplicação Web",
+    "mobile_app": "Aplicativo Mobile Android e iOS",
+    "buy_design": "Comprar Design"
+  }
 }

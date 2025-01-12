@@ -1,5 +1,5 @@
 {
-  "greeting": "👋 Hi! I'm",
+  "greeting": " Hi! I'm",
   "name": "OSMAR",
   "lastname": "J.BERALDO",
   "updating": "PAGE UNDER UPDATE",
@@ -8,6 +8,150 @@
   "years": "15 Years",
   "of_experience": "of Experience",
   "resume": "Resume",
-  "contact": "Contact",
-  "photo_alt": "Photo coming soon"
+  "contact": {
+    "title": "Contact Me",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "subject": "Subject",
+    "message": "Message",
+    "sending": "Sending...",
+    "send_message": "Send Message",
+    "success_message": "Message sent successfully!",
+    "error_message": "Error sending message. Please try again.",
+    "other_ways": "Other Ways to Contact",
+    "choose_preferred": "Choose your preferred way to get in touch with me."
+  },
+  "photo_alt": "Profile photo",
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "certificates": "Certificates",
+    "projects": "Projects"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I am a Full Stack Developer passionate about creating innovative and intuitive web solutions. With over 14 years of experience in software development, I specialize in modern technologies such as React, Node.js, TypeScript, PHP, Python, C#, Java, C++, C, SQL, NoSQL, among others.",
+    "journey": "My professional journey includes working with companies of various sizes, where I developed solid skills in software architecture, agile methodologies, and technical leadership. I constantly seek to learn new technologies and improve my skills to deliver the best solutions."
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "current_role": "Current Role",
+    "previous_roles": "Previous Roles",
+    "latest": "Latest Experience",
+    "pipeline": {
+      "company": "Pipeline Pools",
+      "location": "Jacarezinho, Ourinhos, Assis, Londrina, Santo Antônio",
+      "position": "IT Manager",
+      "period": "September 2010 - Present",
+      "responsibilities": {
+        "project_management": "Project management, including systems and software development, network, and IoT systems",
+        "maintenance": "Installation and maintenance of control and automation systems, Computers, Printers, Routers, Switches, Servers, telephony, etc.",
+        "solutions": "Development of Solutions for clients and Franchises",
+        "optimization": "Solutions and process optimization",
+        "security": "Cybersecurity",
+        "support": "Technical Support"
+      }
+    }
+  },
+  "education": {
+    "title": "Education",
+    "degree": "Degree",
+    "institution": "Institution",
+    "period": "Period",
+    "academic_formation": "Academic Formation",
+    "systems_analyst": {
+      "period": "2022 - 2024",
+      "degree": "Systems Development Analyst",
+      "field": "Systems Development Analyst",
+      "university": "Unicesumar",
+      "location": "Maringa",
+      "type": "Bachelor's Degree"
+    },
+    "cybersecurity": {
+      "period": "2024 - Ongoing",
+      "degree": "Risk Management and Cybersecurity",
+      "field": "Risk Management and Cybersecurity",
+      "university": "Cenes",
+      "type": "Postgraduate"
+    },
+    "pedagogy": {
+      "period": "2024 - Ongoing",
+      "degree": "Pedagogical Coordination and School Supervision",
+      "field": "Pedagogical Coordination and School Supervision",
+      "university": "Cenes",
+      "type": "Postgraduate"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "design_tools": "Design Tools I Use",
+    "technologies": "Technologies I Work With",
+    "dev_tools": "Development and Productivity Tools",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools",
+    "others": "Others"
+  },
+  "certificates": {
+    "title": "Certificates",
+    "my_certificates": "MY CERTIFICATES",
+    "constantly_updating": "Constantly updating",
+    "description": "Access the link below to view my Google Drive certificates. 95% are courses focused on programming, web and mobile development.",
+    "view_certificates": "View Certificates",
+    "view": "View Certificate"
+  },
+  "projects": {
+    "title": "Projects",
+    "view_project": "View Project",
+    "source_code": "Source Code",
+    "latest": "Latest Projects",
+    "technologies_used": "Technologies Used",
+    "access": "Access",
+    "screenshot_alt": "Screenshot of {{project}}",
+    "types": {
+      "web_mobile_app": "Web and Mobile Application",
+      "mobile_app": "Mobile App - Android and iOS",
+      "website_admin": "Website and Admin Panel",
+      "android_app": "Mobile App - Android",
+      "pool_automation": "Pool Automation Board - WIFI",
+      "pool_control": "Pool Equipment Control Board",
+      "pool_ozone": "Pool Ozone Generator",
+      "franquia_piscinas": "Pool Franchise Website"
+    },
+    "civil_engineering": {
+      "title": "Civil Engineering Calculator App"
+    },
+    "pipeconnect": {
+      "title": "PipeConnect"
+    },
+    "busca_certidoes": {
+      "title": "Search Certificates"
+    },
+    "adjac": {
+      "title": "AdJac"
+    },
+    "pipeconnect_hardware": {
+      "title": "PipeConnect Hardware"
+    },
+    "pipecontrol": {
+      "title": "PipeControl"
+    },
+    "pipe100": {
+      "title": "Pipe100"
+    },
+    "franquia_piscinas": {
+      "title": "Pool Franchise"
+    }
+  },
+  "resume": {
+    "title": "Resume",
+    "quick_hire": "Quick Hire",
+    "modern_cv": "Modern CV / Resume",
+    "web_app": "Web Application",
+    "mobile_app": "Mobile App Android & iOS",
+    "buy_design": "Buy Design"
+  }
 }

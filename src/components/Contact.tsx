@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export function Contact() {
+  const { t } = useTranslation();
+  
   const [formData, setFormData] = useState({
     nome: "",
     email: "",
@@ -18,7 +21,7 @@ export function Contact() {
     setStatus("idle");
 
     try {
-      const response = await fetch("https://devosmar.com.br/send-email.php", {
+      const response = await fetch("/send-email.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -37,7 +40,7 @@ export function Contact() {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.message || "Erro ao enviar mensagem");
+        throw new Error(data.message || t('contact.error_message'));
       }
 
       if (data.status === "success") {
@@ -50,7 +53,7 @@ export function Contact() {
           mensagem: "",
         });
       } else {
-        throw new Error(data.message || "Erro ao enviar mensagem");
+        throw new Error(data.message || t('contact.error_message'));
       }
     } catch (error) {
       console.error("Erro:", error);
@@ -74,7 +77,7 @@ export function Contact() {
     <section id="contact" className="min-h-screen bg-zinc-950 text-white py-16">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-yellow-400 mb-16">
-          Entre em Contato
+          {t('contact.title')}
         </h2>
 
         <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -86,7 +89,7 @@ export function Contact() {
                   htmlFor="nome"
                   className="block text-sm font-medium text-gray-300"
                 >
-                  Nome
+                  {t('contact.name')}
                 </label>
                 <input
                   type="text"
@@ -104,7 +107,7 @@ export function Contact() {
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-300"
                 >
-                  Email
+                  {t('contact.email')}
                 </label>
                 <input
                   type="email"
@@ -122,7 +125,7 @@ export function Contact() {
                   htmlFor="telefone"
                   className="block text-sm font-medium text-gray-300"
                 >
-                  Telefone
+                  {t('contact.phone')}
                 </label>
                 <input
                   type="tel"
@@ -139,7 +142,7 @@ export function Contact() {
                   htmlFor="assunto"
                   className="block text-sm font-medium text-gray-300"
                 >
-                  Assunto
+                  {t('contact.subject')}
                 </label>
                 <input
                   type="text"
@@ -157,7 +160,7 @@ export function Contact() {
                   htmlFor="mensagem"
                   className="block text-sm font-medium text-gray-300"
                 >
-                  Mensagem
+                  {t('contact.message')}
                 </label>
                 <textarea
                   id="mensagem"
@@ -177,17 +180,17 @@ export function Contact() {
                   enviando ? "opacity-50 cursor-not-allowed" : ""
                 }`}
               >
-                {enviando ? "Enviando..." : "Enviar Mensagem"}
+                {enviando ? t('contact.sending') : t('contact.send_message')}
               </button>
 
               {status === "success" && (
                 <p className="text-green-400 text-center mt-4">
-                  Mensagem enviada com sucesso!
+                  {t('contact.success_message')}
                 </p>
               )}
               {status === "error" && (
                 <p className="text-red-400 text-center mt-4">
-                  Erro ao enviar mensagem. Por favor, tente novamente.
+                  {t('contact.error_message')}
                 </p>
               )}
             </form>
@@ -196,10 +199,10 @@ export function Contact() {
           {/* Informações de Contato */}
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold text-yellow-400">
-              Outras Formas de Contato
+              {t('contact.other_ways')}
             </h3>
             <p className="text-gray-300">
-              Escolha a forma que preferir para entrar em contato comigo.
+              {t('contact.choose_preferred')}
             </p>
 
             <div className="space-y-4">
@@ -265,7 +268,6 @@ export function Contact() {
           </div>
         </div>
       </div>
-    
     </section>
   );
 }

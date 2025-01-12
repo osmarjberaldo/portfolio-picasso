@@ -1,19 +1,22 @@
 import { Card } from "./ui/card";
+import { useTranslation } from "react-i18next";
 
 export const Experience = () => {
+  const { t } = useTranslation();
+  
   const experiences = [
     {
-      company: "Pipeline Piscinas",
-      location: "Jacarezinho, Ourinhos, Assis, Londrina, Santo Antônio",
-      position: "Gerente TI",
-      period: "Setembro 2010 - Atual",
+      company: t('experience.pipeline.company'),
+      location: t('experience.pipeline.location'),
+      position: t('experience.pipeline.position'),
+      period: t('experience.pipeline.period'),
       responsibilities: [
-        "Gerência de projetos, como desenvolvimento de sistemas e software, rede e sistemas IoT",
-        "Instalação e manutenção de sistemas de controle e automação, Computadores, Impressoras, Roteadores, Switches, Servidores, telefonia, etc.",
-        "Desenvolvimento de Soluções para clientes e Franquias",
-        "Soluções e otimização de processos",
-        "Segurança Cibernética",
-        "Suporte Técnico",
+        t('experience.pipeline.responsibilities.project_management'),
+        t('experience.pipeline.responsibilities.maintenance'),
+        t('experience.pipeline.responsibilities.solutions'),
+        t('experience.pipeline.responsibilities.optimization'),
+        t('experience.pipeline.responsibilities.security'),
+        t('experience.pipeline.responsibilities.support'),
       ],
     },
   ];
@@ -21,7 +24,7 @@ export const Experience = () => {
   return (
     <section className="py-20 px-4">
       <h2 className="text-3xl font-bold text-center mb-12">
-        <span className="text-yellow-400">Última Experiência</span>
+        <span className="text-yellow-400">{t('experience.latest')}</span>
       </h2>
 
       <div className="max-w-4xl mx-auto">

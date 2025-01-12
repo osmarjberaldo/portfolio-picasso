@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface Technology {
   name: string;
@@ -6,20 +7,22 @@ interface Technology {
 }
 
 interface Project {
-  title: string;
+  titleKey: string;
   screenshot: string;
-  tipo: string;
+  typeKey: string;
   technologies: Technology[];
   link: string;
   bgColor: string;
 }
 
 export function Projects() {
+  const { t } = useTranslation();
+
   const projects: Project[] = [
     {
-      title: "Aplicativo de Calculo para Engenharia Civil",
+      titleKey: "projects.civil_engineering.title",
       screenshot: "https://i.ibb.co/f1dPyF4/Captura-de-tela-2024-12-19-081323.png",
-      tipo: "Aplicativo Web e Mobile",
+      typeKey: "projects.types.web_mobile_app",
       technologies: [
         { name: "JavaScript", icon: "https://cdn.simpleicons.org/javascript/F7DF1E" },
         { name: "React", icon: "https://cdn.simpleicons.org/react/61DAFB" },
@@ -34,9 +37,9 @@ export function Projects() {
       bgColor: "bg-blue-950"
     },
     {
-      title: "PipeConnect",
+      titleKey: "projects.pipeconnect.title",
       screenshot: "https://i.ibb.co/2M40BBB/Captura-de-tela-2024-12-19-082836.png",
-      tipo: "Aplicativo Mobile - Android e iOS",
+      typeKey: "projects.types.mobile_app",
       technologies: [
         { name: "React", icon: "https://cdn.simpleicons.org/react/61DAFB" },
         { name: "MQTT", icon: "https://cdn.simpleicons.org/mqtt/FF0000" },
@@ -46,15 +49,15 @@ export function Projects() {
         { name: "AWS", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1024px-Amazon_Web_Services_Logo.svg.png" },
         { name: "Expo", icon: "https://cdn.simpleicons.org/expo/000020" },
         { name: "Google Play", icon: "https://cdn.simpleicons.org/googleplay/00897B" },
-        { name: "App Store", icon: "https://cdn.simpleicons.org/appstore/0D96F6" },
+        { name: "App Store", icon: "https://cdn.simpleicons.org/appstore/0D96F6" }
       ],
       link: "https://apps.apple.com/us/app/pipeconnect/id6737283726?platform=iphone",
       bgColor: "bg-purple-900"
     },
     {
-      title: "Busca Certidões",
+      titleKey: "projects.busca_certidoes.title",
       screenshot: "https://i.ibb.co/hW05CH2/Captura-de-tela-2024-12-19-083434.png",
-      tipo: "Website e Painel Admin",
+      typeKey: "projects.types.website_admin",
       technologies: [
         { name: "React", icon: "https://cdn.simpleicons.org/react/61DAFB" },
         { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript/3178C6" },
@@ -69,9 +72,9 @@ export function Projects() {
       bgColor: "bg-blue-950"
     },
     {
-      title: "AdJac",
+      titleKey: "projects.adjac.title",
       screenshot: "https://i.ibb.co/r0P4Df9/Captura-de-tela-2024-12-19-083924.png",
-      tipo: "Aplicativo Mobile - Android",
+      typeKey: "projects.types.android_app",
       technologies: [
         { name: "React", icon: "https://cdn.simpleicons.org/react/61DAFB" },
         { name: "JavaScript", icon: "https://cdn.simpleicons.org/javascript/F7DF1E" },
@@ -88,9 +91,9 @@ export function Projects() {
       bgColor: "bg-purple-900"
     },
     {
-      title: "PipeConnect",
+      titleKey: "projects.pipeconnect_hardware.title",
       screenshot: "https://i.ibb.co/CKRCJvM/Captura-de-tela-2024-12-26-152637.png",
-      tipo: "Placa de Automação para Piscinas - WIFI",
+      typeKey: "projects.types.pool_automation",
       technologies: [
         { name: "C++", icon: "https://cdn.simpleicons.org/cplusplus/61DAFB" },
         { name: "Altium", icon: "https://cdn.simpleicons.org/altiumdesigner/A5915F" },
@@ -108,14 +111,14 @@ export function Projects() {
       bgColor: "bg-blue-950"
     },
     {
-      title: "PipeControl",
+      titleKey: "projects.pipecontrol.title",
       screenshot: "https://i.ibb.co/Pg6YT6m/Captura-de-tela-2024-12-26-153151.png",
-      tipo: "Placa de Controle para Quipamentos de Piscina",
+      typeKey: "projects.types.pool_control",
       technologies: [
         { name: "C++", icon: "https://cdn.simpleicons.org/cplusplus/61DAFB" },
         { name: "Altium", icon: "https://cdn.simpleicons.org/altiumdesigner/A5915F" },
         { name: "REST API", icon: "https://media.licdn.com/dms/image/v2/D4D12AQHMZSBsgCI9YQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1657641228013?e=2147483647&v=beta&t=PGvET7cRlEDvIgL7-7Y9n0UvrpHFyT_WeqNrFUYaz-I" },
-         { name: "Docker", icon: "https://cdn.simpleicons.org/docker/2496ED" },
+        { name: "Docker", icon: "https://cdn.simpleicons.org/docker/2496ED" },
         { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
         { name: "Github", icon: "https://cdn.simpleicons.org/github/181717" },
       ],
@@ -123,26 +126,25 @@ export function Projects() {
       bgColor: "bg-purple-900"
     },
     {
-      title: "Pipe100",
+      titleKey: "projects.pipe100.title",
       screenshot: "https://pipelinepiscinas.com.br/wp-content/uploads/elementor/thumbs/ozonio-qeytkf5ltgq6jwsly76j3o1nb5gg93qyfem4hlkjgo.webp",
-      tipo: "Gerador de Ozonio para Piscinas",
+      typeKey: "projects.types.pool_ozone",
       technologies: [
         { name: "Altium", icon: "https://cdn.simpleicons.org/altiumdesigner/A5915F" },
         { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
-        { name: "Github", icon: "https://cdn.simpleicons.org/github/181717" },
       ],
       link: "https://pipelinepiscinas.com.br/",
       bgColor: "bg-blue-950"
     },
     {
-      title: "Franquia de Piscinas",
+      titleKey: "projects.franquia_piscinas.title",
       screenshot: "https://i.ibb.co/njFj0k0/Captura-de-tela-2024-12-27-145516.png",
-      tipo: "Site de para divulgação de franquia de piscinas",
+      typeKey: "projects.types.franquia_piscinas",
       technologies: [
         { name: "Wordpress", icon: "https://cdn.simpleicons.org/wordpress/61DAFB" },
         { name: "IA", icon: "https://cdn.simpleicons.org/openai/412991" },
         { name: "REST API", icon: "https://media.licdn.com/dms/image/v2/D4D12AQHMZSBsgCI9YQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1657641228013?e=2147483647&v=beta&t=PGvET7cRlEDvIgL7-7Y9n0UvrpHFyT_WeqNrFUYaz-I" },
-         { name: "Json", icon: "https://cdn.simpleicons.org/json/000000" },
+        { name: "Json", icon: "https://cdn.simpleicons.org/json/000000" },
         { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
         { name: "Github", icon: "https://cdn.simpleicons.org/github/181717" },
       ],
@@ -155,17 +157,17 @@ export function Projects() {
     <section className="py-16 bg-black">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-yellow-400 mb-16">
-          Últimos Projetos
+          {t('projects.latest')}
         </h2>
 
         <div className="flex flex-col gap-8">
           {projects.map((project) => (
-            <div key={project.title} className={`flex flex-col md:flex-row gap-8 ${project.bgColor} rounded-3xl overflow-hidden p-8`}>
+            <div key={project.titleKey} className={`flex flex-col md:flex-row gap-8 ${project.bgColor} rounded-3xl overflow-hidden p-8`}>
               <div className="md:w-[45%]">
                 <div className="bg-gradient-to-br from-blue-400/20 to-purple-400/20 p-2 rounded-2xl">
                   <img 
                     src={project.screenshot} 
-                    alt={`Screenshot do ${project.title}`} 
+                    alt={t('projects.screenshot_alt', { project: t(project.titleKey) })} 
                     className="rounded-xl shadow-lg w-full h-[280px] object-cover border border-white/10"
                   />
                 </div>
@@ -174,17 +176,17 @@ export function Projects() {
               <div className="md:w-[55%] space-y-6">
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-2">
-                    {project.title}
+                    {t(project.titleKey)}
                   </h3>
                   <div className="flex gap-2 mb-4">
                     <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm">
-                      {project.tipo}
+                      {t(project.typeKey)}
                     </span>
                   </div>
                 </div>
 
                 <div>
-                  <h4 className="text-gray-400 mb-3">Tecnologias utilizadas</h4>
+                  <h4 className="text-gray-400 mb-3">{t('projects.technologies_used')}</h4>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
                       <div
@@ -206,7 +208,7 @@ export function Projects() {
                   onClick={() => window.open(project.link, '_blank')}
                   className="flex items-center gap-2 text-white bg-white/10 px-6 py-3 rounded-full hover:bg-white/20 transition-colors"
                 >
-                  Acessar {project.title}
+                  {t('projects.access')} {t(project.titleKey)}
                   <span className="text-lg">→</span>
                 </button>
               </div>

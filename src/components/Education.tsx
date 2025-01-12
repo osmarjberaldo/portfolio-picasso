@@ -1,33 +1,37 @@
+import { useTranslation } from "react-i18next";
+
 export const Education = () => {
+  const { t } = useTranslation();
+
   const education = [
     {
-      period: "2022 - 2024",
-      degree: "Analista em Desenvolvimento de Sistemas",
-      field: "Analista em Desenvolvimento de Sistemas",
-      university: "Unicesumar",
-      location: "Maringa",
-      type: "Graduação",
+      period: t('education.systems_analyst.period'),
+      degree: t('education.systems_analyst.degree'),
+      field: t('education.systems_analyst.field'),
+      university: t('education.systems_analyst.university'),
+      location: t('education.systems_analyst.location'),
+      type: t('education.systems_analyst.type'),
     },
     {
-      period: "2024 - Andamento",
-      degree: "Gestão de Riscos e Cibersegurança",
-      field: "Gestão de Riscos e Cibersegurança",
-      university: "Cenes",
-      type: "Pós-Graduação",
+      period: t('education.cybersecurity.period'),
+      degree: t('education.cybersecurity.degree'),
+      field: t('education.cybersecurity.field'),
+      university: t('education.cybersecurity.university'),
+      type: t('education.cybersecurity.type'),
     },
     {
-      period: "2024 - Andamento",
-      degree: "Coordenação Pedagógica e Supervisão Escolar",
-      field: "Coordenação Pedagógica e Supervisão Escolar",
-      university: "Cenes",
-      type: "Pós-Graduação",
+      period: t('education.pedagogy.period'),
+      degree: t('education.pedagogy.degree'),
+      field: t('education.pedagogy.field'),
+      university: t('education.pedagogy.university'),
+      type: t('education.pedagogy.type'),
     },
   ];
 
   return (
     <section className="py-20 px-4 bg-black/20">
       <h2 className="text-3xl font-bold text-center mb-12">
-        <span className="text-yellow-400">Formação Acadêmica</span>
+        <span className="text-yellow-400">{t('education.academic_formation')}</span>
       </h2>
 
       <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
@@ -42,7 +46,7 @@ export const Education = () => {
             
             <h3 className="text-xl font-semibold text-yellow-400">{edu.field}</h3>
             <p className="text-gray-400">{edu.university}</p>
-            <p className="text-sm text-gray-500">{edu.location}</p>
+            {edu.location && <p className="text-sm text-gray-500">{edu.location}</p>}
           </div>
         ))}
       </div>

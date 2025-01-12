@@ -1,11 +1,14 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 export function Certificates() {
+  const { t } = useTranslation();
+
   return (
     <section className="py-16 bg-black">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-yellow-400 mb-16">
-          Certificados
+          {t('certificates.title')}
         </h2>
         
         <div className="max-w-4xl mx-auto bg-blue-950 rounded-3xl p-8">
@@ -17,20 +20,20 @@ export function Certificates() {
               </svg>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-white">MEUS CERTIFICADOS</h3>
+              <h3 className="text-lg font-semibold text-white">{t('certificates.my_certificates')}</h3>
             </div>
           </div>
 
           {/* Título */}
           <h2 className="text-2xl font-bold text-white mb-4">
-            Em constante atualização
+            {t('certificates.constantly_updating')}
           </h2>
 
           {/* Lista de responsabilidades */}
           <ul className="space-y-3 text-gray-300">            
             <li className="flex items-start gap-2">
               <span className="text-yellow-400 mt-1">→</span>
-              <span>Acesse o link abaixo para o Google Drive com meus certificados. 95% são cursos voltados para programação, desenvolvimento web e mobile.</span>
+              <span>{t('certificates.description')}</span>
             </li>
           </ul>
 
@@ -47,7 +50,7 @@ export function Certificates() {
                 alt="Google Drive" 
                 className="w-8 h-8"
               />
-              <span className="text-white text-lg font-medium">Ver Certificados</span>
+              <span className="text-white text-lg font-medium">{t('certificates.view_certificates')}</span>
             </a>
           </div>
         </div>

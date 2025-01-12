@@ -1,6 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 export function Skills() {
+  const { t } = useTranslation();
+
   const designTools = [
     { name: 'Adobe XD', icon: 'https://cdn.simpleicons.org/adobexd/FF61F6' },
     { name: 'Adobe Photoshop', icon: 'https://cdn.simpleicons.org/adobephotoshop/31A8FF' },
@@ -93,13 +96,13 @@ export function Skills() {
     <section className="py-16 bg-black text-white">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-yellow-400 mb-16">
-          Habilidades
+          {t('skills.title')}
         </h2>
 
         {/* Design Tools */}
         <div className="mb-16">
           <h3 className="text-2xl font-semibold text-yellow-400 mb-8 text-center">
-            Ferramentas de Design que Utilizo
+            {t('skills.design_tools')}
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             {designTools.map((tool) => (
@@ -117,7 +120,7 @@ export function Skills() {
         {/* Technologies */}
         <div className="mb-16">
           <h3 className="text-2xl font-semibold text-yellow-400 mb-8 text-center">
-            Tecnologias que Utilizo
+            {t('skills.technologies')}
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             {technologies.map((tech) => (
@@ -135,7 +138,7 @@ export function Skills() {
         {/* Development Tools */}
         <div>
           <h3 className="text-2xl font-semibold text-yellow-400 mb-8 text-center">
-            Ferramentas de Desenvolvimento e Produtividade
+            {t('skills.dev_tools')}
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             {devTools.map((tool) => (
