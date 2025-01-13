@@ -149,5 +149,21 @@
     "web_app": "Aplicação Web",
     "mobile_app": "Aplicativo Mobile Android e iOS",
     "buy_design": "Comprar Design"
+  },
+  "hero": {
+    "contact": "Contato",
+    "github": "GitHub",
+    "technologies": {
+      "nextjs": "Next.js",
+      "docker": "Docker",
+      "react": "React",
+      "typescript": "TypeScript",
+      "nodejs": "Node.js",
+      "python": "Python",
+      "cpp": "C++",
+      "php": "PHP",
+      "mysql": "MySQL",
+      "laravel": "Laravel"
+    }
   }
 }

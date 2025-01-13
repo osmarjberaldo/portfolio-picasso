@@ -52,13 +52,13 @@ export function Hero() {
         {/* Buttons */}
         <div className="flex gap-4 justify-center mb-12">
           <a href="/curriculo.pdf" target="_blank" rel="noopener noreferrer" className="bg-transparent border-2 border-yellow-400 text-white px-6 py-2 rounded-full hover:bg-yellow-400 hover:text-black transition">
-            {t('resume')}
+            {t('resume.title')}
           </a>
           <a href="#contact" className="bg-yellow-400 text-black px-6 py-2 rounded-full hover:bg-yellow-500 transition">
-            {t('contact')}
+            {t('hero.contact')}
           </a>
           <a href="https://github.com/osmarjberaldo" target="_blank" className="bg-transparent border-2 border-yellow-400 text-white px-6 py-2 rounded-full hover:bg-yellow-400 hover:text-black transition">
-            GitHub
+            {t('hero.github')}
           </a>
         </div>
 
@@ -81,7 +81,7 @@ export function Hero() {
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" 
                    alt="NextJS" className="w-5 h-5 invert" />
             </div>
-            <span className="px-2 text-xs font-medium text-black">Next.js</span>
+            <span className="px-2 text-xs font-medium text-black">{t('hero.technologies.nextjs')}</span>
           </div>
 
           <div className="tech-bubble absolute h-7 bg-white shadow-lg rounded flex items-center animate-float-2" 
@@ -91,7 +91,7 @@ export function Hero() {
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" 
                    alt="Docker" className="w-5 h-5" />
             </div>
-            <span className="px-2 text-xs font-medium text-black">Docker</span>
+            <span className="px-2 text-xs font-medium text-black">{t('hero.technologies.docker')}</span>
           </div>
 
           {/* Second row */}
@@ -102,7 +102,7 @@ export function Hero() {
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" 
                    alt="React" className="w-5 h-5" />
             </div>
-            <span className="px-2 text-xs font-medium text-black">React</span>
+            <span className="px-2 text-xs font-medium text-black">{t('hero.technologies.react')}</span>
           </div>
 
           <div className="tech-bubble absolute h-7 bg-white shadow-lg rounded flex items-center animate-float-4" 
@@ -112,7 +112,7 @@ export function Hero() {
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" 
                    alt="TypeScript" className="w-5 h-5" />
             </div>
-            <span className="px-2 text-xs font-medium text-black">TypeScript</span>
+            <span className="px-2 text-xs font-medium text-black">{t('hero.technologies.typescript')}</span>
           </div>
 
           {/* Third row */}
@@ -123,7 +123,7 @@ export function Hero() {
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" 
                    alt="Node.js" className="w-5 h-5" />
             </div>
-            <span className="px-2 text-xs font-medium text-black">Node.js</span>
+            <span className="px-2 text-xs font-medium text-black">{t('hero.technologies.nodejs')}</span>
           </div>
 
           <div className="tech-bubble absolute h-7 bg-white shadow-lg rounded flex items-center animate-float-6" 
@@ -133,7 +133,7 @@ export function Hero() {
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" 
                    alt="Python" className="w-5 h-5" />
             </div>
-            <span className="px-2 text-xs font-medium text-black">Python</span>
+            <span className="px-2 text-xs font-medium text-black">{t('hero.technologies.python')}</span>
           </div>
 
           {/* Fourth row */}
@@ -144,7 +144,7 @@ export function Hero() {
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" 
                    alt="C++" className="w-6 h-6 object-contain" style={{ margin: '0 auto' }} />
             </div>
-            <span className="px-2 text-xs font-medium text-black">C++</span>
+            <span className="px-2 text-xs font-medium text-black">{t('hero.technologies.cpp')}</span>
           </div>
 
           <div className="tech-bubble absolute h-7 bg-white shadow-lg rounded flex items-center animate-float-5" 
@@ -154,7 +154,7 @@ export function Hero() {
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" 
                    alt="PHP" className="w-6 h-6 object-contain" style={{ margin: '0 auto' }} />
             </div>
-            <span className="px-2 text-xs font-medium text-black">PHP</span>
+            <span className="px-2 text-xs font-medium text-black">{t('hero.technologies.php')}</span>
           </div>
 
           {/* Fifth row */}
@@ -165,7 +165,7 @@ export function Hero() {
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" 
                    alt="MySQL" className="w-6 h-6 object-contain" style={{ margin: '0 auto' }} />
             </div>
-            <span className="px-2 text-xs font-medium text-black">MySQL</span>
+            <span className="px-2 text-xs font-medium text-black">{t('hero.technologies.mysql')}</span>
           </div>
 
           <div className="tech-bubble absolute h-7 bg-white shadow-lg rounded flex items-center animate-float-5" 
@@ -175,7 +175,7 @@ export function Hero() {
               <img src="https://static-00.iconduck.com/assets.00/laravel-icon-249x256-htls1yg6.png" 
                    alt="Laravel" className="w-6 h-6 object-contain" style={{ margin: '0 auto' }} />
             </div>
-            <span className="px-2 text-xs font-medium text-black">Laravel</span>
+            <span className="px-2 text-xs font-medium text-black">{t('hero.technologies.laravel')}</span>
           </div>
         </div>
       </div>

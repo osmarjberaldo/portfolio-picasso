@@ -147,11 +147,27 @@
     }
   },
   "resume": {
-    "title": "Resume",
+    "title": "Curriculum",
     "quick_hire": "Quick Hire",
     "modern_cv": "Modern CV / Resume",
     "web_app": "Web Application",
     "mobile_app": "Mobile App Android & iOS",
     "buy_design": "Buy Design"
+  },
+  "hero": {
+    "contact": "Contact",
+    "github": "GitHub",
+    "technologies": {
+      "nextjs": "Next.js",
+      "docker": "Docker",
+      "react": "React",
+      "typescript": "TypeScript",
+      "nodejs": "Node.js",
+      "python": "Python",
+      "cpp": "C++",
+      "php": "PHP",
+      "mysql": "MySQL",
+      "laravel": "Laravel"
+    }
   }
 }

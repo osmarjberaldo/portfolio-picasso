@@ -14,25 +14,23 @@ export function Contact() {
 
   const [enviando, setEnviando] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setEnviando(true);
     setStatus("idle");
+    setErrorMessage("");
 
     try {
-      const response = await fetch("/send-email.php", {
+      const response = await fetch("https://devosmar.com.br/send-email.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json",
+          "Accept": "application/json",
         },
         body: JSON.stringify({
-          nome: formData.nome,
-          email: formData.email,
-          telefone: formData.telefone,
-          assunto: formData.assunto,
-          mensagem: formData.mensagem,
+          ...formData,
           to_email: "contato@devosmar.com.br",
         }),
       });
@@ -56,8 +54,9 @@ export function Contact() {
         throw new Error(data.message || t('contact.error_message'));
       }
     } catch (error) {
-      console.error("Erro:", error);
+      console.error("Erro no envio:", error);
       setStatus("error");
+      setErrorMessage(error instanceof Error ? error.message : t('contact.error_message'));
     } finally {
       setEnviando(false);
     }
@@ -190,7 +189,7 @@ export function Contact() {
               )}
               {status === "error" && (
                 <p className="text-red-400 text-center mt-4">
-                  {t('contact.error_message')}
+                  {errorMessage}
                 </p>
               )}
             </form>
