@@ -29,16 +29,18 @@ export function Contact() {
           "Content-Type": "application/json",
           "Accept": "application/json",
         },
-        body: JSON.stringify({
-          ...formData,
-          to_email: "contato@devosmar.com.br",
-        }),
+        body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
+      let data;
+      try {
+        data = await response.json();
+      } catch (e) {
+        throw new Error('Erro ao processar resposta do servidor');
+      }
 
       if (!response.ok) {
-        throw new Error(data.message || t('contact.error_message'));
+        throw new Error(data?.message || t('contact.error_message'));
       }
 
       if (data.status === "success") {

@@ -1,15 +1,21 @@
 <?php
+require 'PHPMailer/PHPMailer.php';
+require 'PHPMailer/SMTP.php';
+require 'PHPMailer/Exception.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
 header('Access-Control-Allow-Origin: https://devosmar.com.br');
 header('Access-Control-Allow-Methods: POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type, Accept');
 header('Content-Type: application/json');
 
-// Log de erros em arquivo específico
 ini_set('error_log', __DIR__ . '/email_error.log');
 error_reporting(E_ALL);
-ini_set('display_errors', 0); // Desativa display de erros em produção
+ini_set('display_errors', 0);
 
-// Verificar se é uma requisição OPTIONS
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
     exit();
@@ -22,65 +28,74 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $input = file_get_contents('php://input');
         $data = json_decode($input, true);
         
-        // Validação mais rigorosa dos dados
         if (!$data || !isset($data['nome'], $data['email'], $data['assunto'], $data['mensagem'])) {
             throw new Exception('Dados incompletos');
         }
 
-        // Sanitização dos dados
         $nome = filter_var($data['nome'], FILTER_SANITIZE_STRING);
         $email = filter_var($data['email'], FILTER_SANITIZE_EMAIL);
         $telefone = filter_var($data['telefone'] ?? '', FILTER_SANITIZE_STRING);
         $assunto = filter_var($data['assunto'], FILTER_SANITIZE_STRING);
         $mensagem = filter_var($data['mensagem'], FILTER_SANITIZE_STRING);
-        $to_email = 'contato@devosmar.com.br'; // Email fixo para maior segurança
-
-        // Validações adicionais
+        
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             throw new Exception('Email inválido');
         }
 
-        // Headers do email
-        $headers = array(
-            'From' => $email,
-            'Reply-To' => $email,
-            'X-Mailer' => 'PHP/' . phpversion(),
-            'MIME-Version' => '1.0',
-            'Content-Type' => 'text/html; charset=UTF-8'
-        );
-
-        $message_body = "
-            <html>
-            <head>
-                <title>Nova mensagem do site</title>
-            </head>
-            <body>
-                <h2>Nova mensagem do site</h2>
-                <p><strong>Nome:</strong> " . htmlspecialchars($nome) . "</p>
-                <p><strong>Email:</strong> " . htmlspecialchars($email) . "</p>
-                <p><strong>Telefone:</strong> " . htmlspecialchars($telefone) . "</p>
-                <p><strong>Assunto:</strong> " . htmlspecialchars($assunto) . "</p>
-                <p><strong>Mensagem:</strong></p>
-                <p>" . nl2br(htmlspecialchars($mensagem)) . "</p>
-            </body>
-            </html>
-        ";
-
-        // Tentativa de envio com mais informações de debug
-        $success = mail($to_email, "Contato do Site: $assunto", $message_body, $headers);
-
-        if (!$success) {
-            $error = error_get_last();
-            error_log("Falha no envio do email: " . print_r($error, true));
-            throw new Exception('Falha ao enviar email');
-        }
-
-        error_log("Email enviado com sucesso para $to_email");
+        // Configuração do PHPMailer
+        $mail = new PHPMailer(true);
         
-        echo json_encode([
-            'status' => 'success',
-            'message' => 'Mensagem enviada com sucesso!'
-        ]);
+        try {
+            // Configurações do servidor
+            $mail->isSMTP();
+            $mail->Host = 'smtp.hostinger.com'; // Ajuste para seu servidor SMTP
+            $mail->SMTPAuth = true;
+            $mail->Username = 'contato@devosmar.com.br'; // Seu email
+            $mail->Password = 'SUA_SENHA_AQUI'; // Sua senha
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $mail->Port = 587;
+            
+            // Destinatários
+            $mail->setFrom('contato@devosmar.com.br', 'Contato Site');
+            $mail->addAddress('contato@devosmar.com.br');
+            $mail->addReplyTo($email, $nome);
+            
+            // Conteúdo
+            $mail->isHTML(true);
+            $mail->CharSet = 'UTF-8';
+            $mail->Subject = "Contato do Site: $assunto";
+            
+            $message_body = "
+                <html>
+                <head>
+                    <title>Nova mensagem do site</title>
+                </head>
+                <body>
+                    <h2>Nova mensagem do site</h2>
+                    <p><strong>Nome:</strong> " . htmlspecialchars($nome) . "</p>
+                    <p><strong>Email:</strong> " . htmlspecialchars($email) . "</p>
+                    <p><strong>Telefone:</strong> " . htmlspecialchars($telefone) . "</p>
+                    <p><strong>Assunto:</strong> " . htmlspecialchars($assunto) . "</p>
+                    <p><strong>Mensagem:</strong></p>
+                    <p>" . nl2br(htmlspecialchars($mensagem)) . "</p>
+                </body>
+                </html>
+            ";
+            
+            $mail->Body = $message_body;
+            
+            $mail->send();
+            error_log("Email enviado com sucesso para contato@devosmar.com.br");
+            
+            echo json_encode([
+                'status' => 'success',
+                'message' => 'Mensagem enviada com sucesso!'
+            ]);
+            
+        } catch (Exception $e) {
+            error_log("Erro no envio do email: " . $mail->ErrorInfo);
+            throw new Exception("Erro no envio: " . $mail->ErrorInfo);
+        }
 
     } catch (Exception $e) {
         error_log("Erro no processamento do email: " . $e->getMessage());
