@@ -7,6 +7,7 @@ import { Projects } from "@/components/Projects";
 import { Resume } from "@/components/Resume";
 import { Contact } from "@/components/Contact";
 import { GoogleAdsense } from "@/components/GoogleAdsense";
+import { Skills } from "@/components/Skills";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <Education />
       <Experience />
       <Projects />
+      <Skills />
       <Certificates />
       <Resume />
       <Contact />
