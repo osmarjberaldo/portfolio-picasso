@@ -163,7 +163,8 @@
       "cpp": "C++",
       "php": "PHP",
       "mysql": "MySQL",
-      "laravel": "Laravel"
+      "laravel": "Laravel",
+      "golang": "Go"
     }
   }
 }

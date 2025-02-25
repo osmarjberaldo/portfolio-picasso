@@ -67,7 +67,7 @@ export function Hero() {
           {/* Central photo */}
           <div className="absolute inset-0 bg-yellow-400 rounded-full overflow-hidden">
             <img
-              src="/sua-foto.jpg"
+              src="/eu.png"
               alt={t('photo_alt')}
               className="w-full h-full object-cover"
             />
@@ -170,12 +170,12 @@ export function Hero() {
 
           <div className="tech-bubble absolute h-7 bg-white shadow-lg rounded flex items-center animate-float-5" 
                style={{ width: '100px', borderRadius: '5px', top: '260px', right: '-120px' }}>
-            <div className="bg-[#FF2D20] h-7 w-9 flex items-center justify-center" 
+            <div className="bg-[#00ADD8] h-7 w-9 flex items-center justify-center" 
                  style={{ borderTopLeftRadius: '5px', borderBottomLeftRadius: '5px' }}>
-              <img src="https://static-00.iconduck.com/assets.00/laravel-icon-249x256-htls1yg6.png" 
-                   alt="Laravel" className="w-6 h-6 object-contain" style={{ margin: '0 auto' }} />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" 
+                   alt="Golang" className="w-5 h-5" />
             </div>
-            <span className="px-2 text-xs font-medium text-black">{t('hero.technologies.laravel')}</span>
+            <span className="px-2 text-xs font-medium text-black">{t('hero.technologies.golang')}</span>
           </div>
         </div>
       </div>

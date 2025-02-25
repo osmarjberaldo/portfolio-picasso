@@ -8,8 +8,12 @@ export function Skills() {
     { name: 'Adobe XD', icon: 'https://cdn.simpleicons.org/adobexd/FF61F6' },
     { name: 'Adobe Photoshop', icon: 'https://cdn.simpleicons.org/adobephotoshop/31A8FF' },
     { name: 'Adobe Premiere', icon: 'https://cdn.simpleicons.org/adobepremierepro/9999FF' },
+    { name: 'GIMP', icon: 'https://cdn.simpleicons.org/gimp/5C5543' },
+    { name: 'Inkscape', icon: 'https://cdn.simpleicons.org/inkscape/000000' },
     { name: 'Figma', icon: 'https://cdn.simpleicons.org/figma/F24E1E' },
     { name: 'Canva', icon: 'https://cdn.simpleicons.org/canva/00C4CC' },
+    { name: 'Blender', icon: 'https://cdn.simpleicons.org/blender/F5792A' },
+    { name: 'Krita', icon: 'https://cdn.simpleicons.org/krita/3BABFF' },
     { name: 'Midjourney', icon: 'https://upload.wikimedia.org/wikipedia/commons/2/24/Midjourney_Emblem.svg' },
     { name: 'DALL-E', icon: 'https://cdn.simpleicons.org/openai/412991' },
   ];
@@ -28,6 +32,7 @@ export function Skills() {
     { name: 'Visual Basic', icon: 'https://cdn.simpleicons.org/dotnet/512BD4' },
     { name: 'Java', icon: 'https://cdn-icons-png.flaticon.com/512/226/226777.png' },
     { name: 'Python', icon: 'https://cdn.simpleicons.org/python/3776AB' },
+    { name: 'Go', icon: 'https://cdn.simpleicons.org/go/00ADD8' },
     { name: 'Node.js', icon: 'https://cdn.simpleicons.org/nodedotjs/339933' },
     { name: 'TypeScript', icon: 'https://cdn.simpleicons.org/typescript/3178C6' },
     { name: 'Docker', icon: 'https://cdn.simpleicons.org/docker/2496ED' },
@@ -65,6 +70,18 @@ export function Skills() {
     { name: 'npm', icon: 'https://cdn.simpleicons.org/npm/CB3837' },
     { name: 'Wordpress', icon: 'https://cdn.simpleicons.org/wordpress/21759B' },
     { name: 'Cloudflare', icon: 'https://cdn.simpleicons.org/cloudflare/F38020' },
+    { name: 'TensorFlow', icon: 'https://cdn.simpleicons.org/tensorflow/FF6F00' },
+    { name: 'PyTorch', icon: 'https://cdn.simpleicons.org/pytorch/EE4C2C' },
+    { name: 'Keras', icon: 'https://cdn.simpleicons.org/keras/D00000' },
+    { name: 'Scikit-learn', icon: 'https://cdn.simpleicons.org/scikitlearn/F7931E' },
+    { name: 'Pandas', icon: 'https://cdn.simpleicons.org/pandas/150458' },
+    { name: 'NumPy', icon: 'https://cdn.simpleicons.org/numpy/013243' },
+    { name: 'Hugging Face', icon: 'https://cdn.simpleicons.org/huggingface/FFD21E' },
+    { name: 'OpenCV', icon: 'https://cdn.simpleicons.org/opencv/5C3EE8' },
+    { name: 'Jupyter', icon: 'https://cdn.simpleicons.org/jupyter/F37626' },
+    { name: 'Anaconda', icon: 'https://cdn.simpleicons.org/anaconda/44A833' },
+    { name: 'ChatGPT', icon: 'https://cdn.simpleicons.org/openai/412991' },
+    { name: 'Google Colab', icon: 'https://cdn.simpleicons.org/googlecolab/F9AB00' }
   ];
 
   const devTools = [
@@ -90,6 +107,8 @@ export function Skills() {
     { name: 'Wireshark', icon: 'https://cdn.simpleicons.org/wireshark/000000' },
     { name: 'Burp Suite', icon: 'https://cdn.simpleicons.org/burpsuite/000000' },   
     { name: 'Kubernetes', icon: 'https://cdn.simpleicons.org/kubernetes/326CE5' },
+    { name: 'Altium Designer', icon: 'https://cdn.simpleicons.org/altiumdesigner/A5915F' },
+    { name: 'Proteus', icon: 'https://cdn-icons-png.flaticon.com/512/6791/6791162.png' },
   ];
 
   return (
