@@ -19,9 +19,7 @@ const Index = () => {
       <Projects />
       <Skills />
       <Certificates />
-      <Resume />
       <Contact />
-      <GoogleAdsense />
     </div>
   );
 };

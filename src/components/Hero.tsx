@@ -45,7 +45,7 @@ export function Hero() {
             {t('roles')}
           </h2>
           <p className="text-lg text-gray-300">
-            {t('experience')} <span className="bg-yellow-400 px-2 rounded text-black">{t('years')}</span> {t('of_experience')}
+           {t('experts')} <span className="bg-yellow-400 px-2 rounded text-black">{t('years')}</span> {t('of_experience')}
           </p>
         </div>
 
