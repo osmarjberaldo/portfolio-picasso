@@ -118,6 +118,9 @@
       "pool_ozone": "Gerador de Ozônio para Piscinas",
       "franquia_piscinas": "Site para divulgação de franquia de piscinas"
     },
+    "qr_code_free": {
+      "title": "Gerador de QR Code Gratuito"
+    },
     "civil_engineering": {
       "title": "Aplicativo de Cálculo para Engenharia Civil"
     },

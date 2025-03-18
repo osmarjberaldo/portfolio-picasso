@@ -20,6 +20,22 @@ export function Projects() {
 
   const projects: Project[] = [
     {
+      titleKey: "projects.qr_code_free.title",
+      screenshot: "https://i.ibb.co/8nWbmMZT/Captura-de-tela-2025-03-18-074316.png",
+      typeKey: "projects.types.web_mobile_app",
+      technologies: [
+        { name: "JavaScript", icon: "https://cdn.simpleicons.org/javascript/F7DF1E" },
+        { name: "React", icon: "https://cdn.simpleicons.org/react/61DAFB" },
+        { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
+        { name: "HTML5", icon: "https://cdn.simpleicons.org/html5/E34F26" },
+        { name: "CSS3", icon: "https://cdn.simpleicons.org/css3/1572B6" },
+        { name: "REST API", icon: "https://media.licdn.com/dms/image/v2/D4D12AQHMZSBsgCI9YQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1657641228013?e=2147483647&v=beta&t=PGvET7cRlEDvIgL7-7Y9n0UvrpHFyT_WeqNrFUYaz-I" },
+        { name: "npm", icon: "https://cdn.simpleicons.org/npm/CB3837" },
+      ],
+      link: "https://devosmar.com.br/qrcodefree/",
+      bgColor: "bg-blue-950"
+    },
+    {
       titleKey: "projects.civil_engineering.title",
       screenshot: "https://i.ibb.co/f1dPyF4/Captura-de-tela-2024-12-19-081323.png",
       typeKey: "projects.types.web_mobile_app",

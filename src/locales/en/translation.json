@@ -122,6 +122,9 @@
       "pool_ozone": "Pool Ozone Generator",
       "franquia_piscinas": "Pool Franchise Website"
     },
+    "qr_code_free": {
+      "title": "Free QR Code Generator"
+    },
     "civil_engineering": {
       "title": "Civil Engineering Calculator App"
     },
