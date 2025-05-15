@@ -120,7 +120,8 @@
       "pool_automation": "Pool Automation Board - WIFI",
       "pool_control": "Pool Equipment Control Board",
       "pool_ozone": "Pool Ozone Generator",
-      "franquia_piscinas": "Pool Franchise Website"
+      "franquia_piscinas": "Pool Franchise Website",
+      "web_app": "Web Application"
     },
     "qr_code_free": {
       "title": "Free QR Code Generator"
@@ -148,6 +149,9 @@
     },
     "franquia_piscinas": {
       "title": "Pool Franchise"
+    },
+    "resistor_calculator": {
+      "title": "Resistor Calculator"
     }
   },
   "resume": {

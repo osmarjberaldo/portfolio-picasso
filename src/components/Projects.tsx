@@ -166,6 +166,21 @@ export function Projects() {
       ],
       link: "https://franquiapipeline.com/",
       bgColor: "bg-purple-900"
+    },
+    {
+      titleKey: "projects.resistor_calculator.title",
+      screenshot: "https://i.ibb.co/dJ4xykb8/Captura-de-tela-2025-05-15-081124.png",
+      typeKey: "projects.types.web_app",
+      technologies: [
+        { name: "React", icon: "https://cdn.simpleicons.org/react/61DAFB" },
+        { name: "Vite", icon: "https://img.icons8.com/fluent/512/vite.png" },
+        { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
+        { name: "JavaScript", icon: "https://cdn.simpleicons.org/javascript/F7DF1E" },
+        { name: "HTML5", icon: "https://cdn.simpleicons.org/html5/E34F26" },
+        { name: "CSS3", icon: "https://cdn.simpleicons.org/css3/1572B6" }
+      ],
+      link: "https://resistoronline.devosmar.com.br/",
+      bgColor: "bg-green-950"
     }
   ];
 
